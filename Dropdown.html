@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="css/makisu.css" />
+</head>
+<body>
+
+
+<div class="dropdownlistNaviOne">
+<section class="clearfix">
+    <div class="fleft">
+        <select id="cd-dropdown" class="cd-select">
+            <option value="-1" selected>Choose a network to add</option>
+            <option value="1" class="icon-google-plus">Google Plus</option>
+            <option value="2" class="icon-facebook">Facebook</option>
+            <option value="3" class="icon-twitter">Twitter</option>
+            <option value="4" class="icon-github">GitHub</option>
+        </select>
+    </div>
+</section>
+</div><!-- /container -->
+
+<div class="dropdownlistNaviTwo">
+    <dl class="maki">
+        <dt>Maki</dt>
+        <dd><a href="#">Ana-kyu</a></dd>
+        <dd><a href="#">Chutoro</a></dd>
+        <dd><a href="#">Kaiware</a></dd>
+        <dd><a href="#">Kampyo</a></dd>
+        <dd><a href="#">Kappa</a></dd>
+        <dd><a href="#">Natto</a></dd>
+        <dd><a href="#">Negitoro</a></dd>
+        <dd><a href="#">Oshinko</a></dd>
+        <dd><a href="#">Otoro</a></dd>
+        <dd><a href="#">Tekka</a></dd>
+    </dl>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+<script src="js/makisu.js"></script>
+<script type="text/javascript">
+
+    $( function() {
+
+        $( '#cd-dropdown' ).dropdown( {
+            gutter : 5,
+            delay : 100,
+            random : true
+        } );
+
+    });
+
+
+    if ( $.fn.makisu.enabled ) {
+
+        var $maki = $( '.maki' );
+
+        // Create Makisus
+
+        $maki.makisu({
+            selector: 'dd',
+            overlap: 0.6,
+            speed: 0.8
+        });
+
+        // Open all
+
+//        $( '.maki' ).makisu( 'open' );
+
+        // Toggle on click
+
+        $( '.toggle' ).on( 'click', function() {
+            $( '.maki' ).makisu( 'toggle' );
+        });
+
+        // Disable all links
+
+        $( '.demo a' ).click( function( event ) {
+            event.preventDefault();
+        });
+
+    } else {
+
+        $( '.warning' ).show();
+    }
+
+
+    window.onload=function(){
+        $('.cd-dropdown>ul').children().click(
+            function(){
+                $(this).parent().parent().animate({
+                    opacity:0.8,
+                    left:'-=200'
+                },1000,"swing",function(){
+                    $('.dropdownlistNaviTwo').animate({right:'150'},1000,function(){
+                        $( '.maki' ).makisu( 'open' );
+                    });
+                });
+                console.log($(this).children()[0].innerText);
+            }
+        );
+    };
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
