@@ -1,0 +1,18 @@
+#content{
+    margin: 0 auto;
+    width:800px;
+    padding: 0px;
+    margin-top:40px;
+}
+#mapdiv{
+    width: 800px;
+    height: 800px;
+}
+#example{
+    color: white;
+    -webkit-border-radius: 2;
+}
+#button{
+    position: absolute;
+    top:200px;
+}

@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1439f7e-e578-4b05-bbc6-f9f71dcbe778" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/redbutton.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.pointpoint.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/transform.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/all.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/map.css" />
+      <change type="MOVED" beforePath="C:\Users\i068959\Documents\GitHub\DKOM2013\index.html" afterPath="$PROJECT_DIR$/Index2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dropdown.html" afterPath="$PROJECT_DIR$/Dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/dropdown.css" afterPath="$PROJECT_DIR$/css/dropdown.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/makisu.css" afterPath="$PROJECT_DIR$/css/makisu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/OpenLayers/lib/OpenLayers/Layer/ArcGIS93Rest.js" afterPath="$PROJECT_DIR$/js/OpenLayers/lib/OpenLayers/Layer/ArcGIS93Rest.js" />
     </list>
     <ignored path="DKOM2013.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +27,40 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Dropdown.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Dropdown.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dropdown.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="8" selection-start="3660" selection-end="3660" vertical-scroll-proportion="0.34402654">
+            <state line="31" column="33" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-22.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/all.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="23" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="12" selection-start="4595" selection-end="4595" vertical-scroll-proportion="-12.774194">
+              <folding>
+                <element signature="tag#div#3;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Map.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="7" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.9352941">
               <folding />
             </state>
           </provider>
@@ -69,21 +97,25 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Map.html" />
         <option value="$PROJECT_DIR$/js/magnetic.js" />
         <option value="$PROJECT_DIR$/js/jquery.dropdown.js" />
         <option value="$PROJECT_DIR$/css/dropdown.css" />
         <option value="$PROJECT_DIR$/css/makisu.css" />
         <option value="$PROJECT_DIR$/css/redbutton.css" />
         <option value="$PROJECT_DIR$/Dropdown.html" />
+        <option value="$PROJECT_DIR$/js/impress.js" />
+        <option value="$PROJECT_DIR$/css/map.css" />
+        <option value="$PROJECT_DIR$/css/all.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Map.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="643" />
-    <option name="y" value="36" />
-    <option name="width" value="1547" />
-    <option name="height" value="1122" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1598" />
+    <option name="height" value="898" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -209,14 +241,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="643" y="36" width="1547" height="1122" extended-state="0" />
+    <frame x="1" y="1" width="1598" height="898" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18103448" sideWeight="0.6703854" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17511225" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -283,30 +315,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/magnetic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="424" selection-end="424" vertical-scroll-proportion="0.38136512">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="7" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.9311828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/arrows.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/drugstore.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1143" column="35" selection-start="19834" selection-end="19834" vertical-scroll-proportion="0.36181435">
@@ -351,9 +359,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/impress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="0.3764706">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/avgrund.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="9" selection-start="2877" selection-end="2877" vertical-scroll-proportion="0.7411765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.pointpoint.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="42" selection-start="329" selection-end="344" vertical-scroll-proportion="-12.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="59" selection-start="0" selection-end="4685" vertical-scroll-proportion="-0.7654321">
           <folding />
         </state>
       </provider>
@@ -365,9 +394,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/map.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="246" selection-end="246" vertical-scroll-proportion="0.42352942">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="12" selection-start="4595" selection-end="4595" vertical-scroll-proportion="-12.774194">
+          <folding>
+            <element signature="tag#div#3;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dropdown.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="8" selection-start="3660" selection-end="3660" vertical-scroll-proportion="0.34402654">
+        <state line="31" column="33" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-22.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="7" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.9352941">
           <folding />
         </state>
       </provider>
