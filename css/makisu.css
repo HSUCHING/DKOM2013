@@ -3,7 +3,8 @@
 .dropdownlistNaviTwo{
     position: absolute;
     top:330px;
-    right:-250px;
+    right:155px;
+    display: none;
 }
 
 .maki {
@@ -19,12 +20,14 @@
     margin-left: -140px;
     margin-top: -280px;
     top: 55%;
+    text-align: center;
 }
 
 .maki a {
 
     display: block;
     color: #fff;
+    text-decoration: none;
 }
 
 .maki a:hover {
@@ -38,7 +41,7 @@
     background: #E0FBAC;
     margin: 0;
     height: 55px;
-    width: 270px;
+    width: 230px;
     color: #fff;
 }
 
@@ -50,16 +53,15 @@
     -ms-transform: translateZ(0.3px);
     -o-transform: translateZ(0.3px);
     transform: translateZ(0.3px);
-
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .maki dd {
 
     border-top: 1px dashed rgba(255,255,255,0.3);
     line-height: 35px;
-    font-size: 11px;
+    font-size: 15px;
     height: 35px;
     margin: 0;
 }

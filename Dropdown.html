@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-8">
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/dropdown.css" />
     <link rel="stylesheet" type="text/css" href="css/makisu.css" />
+    <link rel="stylesheet" type="text/css" href="css/redbutton.css">
 </head>
 <body>
 
@@ -12,11 +14,16 @@
 <section class="clearfix">
     <div class="fleft">
         <select id="cd-dropdown" class="cd-select">
-            <option value="-1" selected>Choose a network to add</option>
-            <option value="1" class="icon-google-plus">Google Plus</option>
-            <option value="2" class="icon-facebook">Facebook</option>
-            <option value="3" class="icon-twitter">Twitter</option>
-            <option value="4" class="icon-github">GitHub</option>
+            <option value="-1" selected>选择地区</option>
+            <option value="pudong" class="icon-google-plus">浦东新区</option>
+            <option value="jingan" class="icon-facebook">静安区</option>
+            <option value="changning" class="icon-twitter">长宁区</option>
+            <option value="huangpu" class="icon-github">黄浦区</option>
+            <option value="putuo" class="icon-github">普陀区</option>
+            <option value="zabei" class="icon-github">闸北区</option>
+            <option value="luwan" class="icon-github">卢湾区</option>
+            <option value="xuhui" class="icon-github">徐汇区</option>
+            <option value="yangpu" class="icon-github">杨浦区</option>
         </select>
     </div>
 </section>
@@ -24,21 +31,23 @@
 
 <div class="dropdownlistNaviTwo">
     <dl class="maki">
-        <dt>Maki</dt>
-        <dd><a href="#">Ana-kyu</a></dd>
-        <dd><a href="#">Chutoro</a></dd>
-        <dd><a href="#">Kaiware</a></dd>
-        <dd><a href="#">Kampyo</a></dd>
-        <dd><a href="#">Kappa</a></dd>
-        <dd><a href="#">Natto</a></dd>
-        <dd><a href="#">Negitoro</a></dd>
-        <dd><a href="#">Oshinko</a></dd>
-        <dd><a href="#">Otoro</a></dd>
-        <dd><a href="#">Tekka</a></dd>
+        <dt>热门商区</dt>
+        <dd><a value="lujiazui" href="#">陆家嘴</a></dd>
+        <dd><a value="babaiban" href="#">八佰伴</a></dd>
+        <dd><a value="centerpark" href="#">世纪公园</a></dd>
+        <dd><a value="jinbridge" href="#">金桥</a></dd>
+        <dd><a value="yuanshenggymcenter" href="#">源深体育中心</a></dd>
+        <dd><a value="zhangjiang" href="#">张江</a></dd>
+        <dd><a value="chuansha" href="#">川沙</a></dd>
+        <dd><a value="waigaoqiao" href="#">外高桥</a></dd>
+        <dd><a value="tangbridge" href="#">塘桥</a></dd>
+        <dd><a value="huinantown" href="#">惠南镇</a></dd>
     </dl>
 </div>
 
-
+<div id="buttonContainer">
+    <a href="#" class="redButton" id="push">Push</a>
+</div>
 
 
 
@@ -46,52 +55,49 @@
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.dropdown.js"></script>
-<script src="js/makisu.js"></script>
+<script type="text/javascript" src="js/makisu.js"></script>
+<script type="text/javascript" src="js/jquery.pointpoint.js"></script>
+<!--<script type="text/javascript" src="js/transform.js"></script>-->
+
 <script type="text/javascript">
 
     $( function() {
-
         $( '#cd-dropdown' ).dropdown( {
             gutter : 5,
             delay : 100,
             random : true
         } );
-
     });
 
 
     if ( $.fn.makisu.enabled ) {
-
         var $maki = $( '.maki' );
-
         // Create Makisus
-
         $maki.makisu({
             selector: 'dd',
             overlap: 0.6,
             speed: 0.8
         });
-
         // Open all
 
 //        $( '.maki' ).makisu( 'open' );
 
         // Toggle on click
-
         $( '.toggle' ).on( 'click', function() {
             $( '.maki' ).makisu( 'toggle' );
         });
 
         // Disable all links
-
         $( '.demo a' ).click( function( event ) {
             event.preventDefault();
         });
-
     } else {
 
         $( '.warning' ).show();
     }
+
+
+    var pp = $('#push').pointPoint();
 
 
     window.onload=function(){
@@ -99,27 +105,34 @@
             function(){
                 $(this).parent().parent().animate({
                     opacity:0.8,
-                    left:'-=200'
+                    right:'200'
                 },1000,"swing",function(){
-                    $('.dropdownlistNaviTwo').animate({right:'150'},1000,function(){
+//                    $('.dropdownlistNaviTwo').animate({right:'150'},1000,function(){
+                    $('.dropdownlistNaviTwo').fadeIn(2500,'swing',function(){
                         $( '.maki' ).makisu( 'open' );
                     });
                 });
-                console.log($(this).children()[0].innerText);
+                console.log($(this).attr("data-value"));
             }
         );
+       $('.dropdownlistNaviTwo dd').click(
+               function(){
+                   console.log($(this).children()[0].attributes.item().value);
+                   $('.dropdownlistNaviTwo').fadeOut(2000,'swing',function(){
+                       $('.cd-dropdown').animate({
+                           opacity:1.0,
+                           right:'0'
+                       },1000,"swing",function(){
+                           $('#buttonContainer').fadeIn(1000,'swing');
+                       });
+                   });
+                   $('#buttonContainer').click(function(){
+                       alert("click");
+                   });
+               }
+       );
     };
-
 </script>
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
