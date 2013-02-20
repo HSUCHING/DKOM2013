@@ -228,7 +228,7 @@
 
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    background: #f4f4f4 url(../img/background.jpg);
+    /*background: #f4f4f4 url(../img/background.jpg);*/
     font-weight: 300;
     font-size: 15px;
     color: #333;
@@ -244,11 +244,10 @@ body {
     right:-100px;
 }
 
-
 .dropdownlistNaviOne > header {
     padding: 40px 10px 50px;
     border-bottom: 1px solid #ddd;
-    box-shadow: 0 1px rgba(255,255,255,0.8);
+    box-shadow: 0 1px rgba(255, 255, 255, 0.8);
     margin-bottom: 30px;
 }
 

@@ -25,8 +25,10 @@ Magnetic = new(function() {
         return temp_b;
     }
     function G(a) {
-        n = a.clientX - (window.innerWidth - i) * 0.5;
-        o = a.clientY - (window.innerHeight - j) * 0.5
+//        n = a.clientX  - (window.innerWidth - i) * 0.5;
+//        o = a.clientY  - (window.innerHeight - j) * 0.5
+        n = a.clientX  - 100;
+        o = a.clientY  - 50;
     }
     function H(a) {
         a.preventDefault();
@@ -109,13 +111,17 @@ Magnetic = new(function() {
         var a = (window.innerWidth - i) * 0.5,
             b = (window.innerHeight - j) * 0.5;
         e.style.position = "absolute";
-        e.style.left = a + "px";
-        e.style.top = b + "px";
+//        e.style.left = a-100 + "px";
+//        e.style.top = b + "px";
+        e.style.left="100px";
+        e.style.top = "50px";
 
 //        add by Hsuching
         document.getElementById("mapdiv").style.position="absolute";
-        document.getElementById("mapdiv").style.left=a + "px";
-        document.getElementById("mapdiv").style.top=b + "px";
+//        document.getElementById("mapdiv").style.left=a-100 + "px";
+//        document.getElementById("mapdiv").style.top=b + "px";
+        document.getElementById("mapdiv").style.left="100px";
+        document.getElementById("mapdiv").style.top="50px";
 
         t.style.position = "absolute";
         t.style.left = a + "px";
