@@ -1,0 +1,394 @@
+{
+    "areaId": 1,
+    "locationData": {
+        "102": {
+            "locationId": 102,
+            "areaId": 1,
+            "description": "Chrysanthemum Park",
+            "type": 1,
+            "latitude": 31.227784,
+            "longitude": 121.512576,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 4,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 1100
+                }
+            }
+        },
+        "103": {
+            "locationId": 103,
+            "areaId": 1,
+            "description": "Southeast New Village",
+            "type": 1,
+            "latitude": 31.22617,
+            "longitude": 121.515312,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 2,
+                    "numOfResidNormal": 1800,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "100": {
+            "locationId": 100,
+            "areaId": 1,
+            "description": "DongYuan No.3 Unit",
+            "type": 1,
+            "latitude": 31.23028,
+            "longitude": 121.513628,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 2,
+                    "numOfResidNormal": 2000,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "101": {
+            "locationId": 101,
+            "areaId": 1,
+            "description": "DongYuan No.4 Unit",
+            "type": 1,
+            "latitude": 31.229761,
+            "longitude": 121.51292,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 2,
+                    "numOfResidNormal": 1500,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "110": {
+            "locationId": 110,
+            "areaId": 1,
+            "description": "HuaRong Building",
+            "type": 3,
+            "latitude": 31.226041,
+            "longitude": 121.517351,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "111": {
+            "locationId": 111,
+            "areaId": 1,
+            "description": "Quandong Unit",
+            "type": 1,
+            "latitude": 31.225858,
+            "longitude": 121.520494,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 2,
+                    "numOfResidNormal": 2000,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "108": {
+            "locationId": 108,
+            "areaId": 1,
+            "description": "Xindalu Square",
+            "type": 2,
+            "latitude": 31.2295,
+            "longitude": 121.51881,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "109": {
+            "locationId": 109,
+            "areaId": 1,
+            "description": "Resources Times Square",
+            "type": 2,
+            "latitude": 31.227115,
+            "longitude": 121.517254,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 3,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "106": {
+            "locationId": 106,
+            "areaId": 1,
+            "description": "XinMei Square",
+            "type": 2,
+            "latitude": 31.229427,
+            "longitude": 121.516492,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 3,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "107": {
+            "locationId": 107,
+            "areaId": 1,
+            "description": "No.1 Yaohan",
+            "type": 2,
+            "latitude": 31.228197,
+            "longitude": 121.517115,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "104": {
+            "locationId": 104,
+            "areaId": 1,
+            "description": "ZhangYang Rd No.370",
+            "type": 1,
+            "latitude": 31.225821,
+            "longitude": 121.514207,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 2,
+                    "numOfResidNormal": 2400,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "105": {
+            "locationId": 105,
+            "areaId": 1,
+            "description": "Shanghai Bay",
+            "type": 2,
+            "latitude": 31.227656,
+            "longitude": 121.515634,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 3,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "115": {
+            "locationId": 115,
+            "areaId": 1,
+            "description": "Oriental Financial Plaza",
+            "type": 3,
+            "latitude": 31.229775,
+            "longitude": 121.522565,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 3,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "114": {
+            "locationId": 114,
+            "areaId": 1,
+            "description": "Galaxy Building",
+            "type": 3,
+            "latitude": 31.230463,
+            "longitude": 121.520934,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "113": {
+            "locationId": 113,
+            "areaId": 1,
+            "description": "Sino Life Tower",
+            "type": 3,
+            "latitude": 31.229362,
+            "longitude": 121.520655,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 3,
+                    "spendingPower": 3,
+                    "numOfResidNormal": 0,
+                    "numOfResidAdvance": 0
+                }
+            }
+        },
+        "112": {
+            "locationId": 112,
+            "areaId": 1,
+            "description": "Laodong Unit",
+            "type": 1,
+            "latitude": 31.22639,
+            "longitude": 121.5222,
+            "timeDepInfoMap": {
+                "2013": {
+                    "id": 0,
+                    "year": 2013,
+                    "scale": 2,
+                    "spendingPower": 2,
+                    "numOfResidNormal": 2000,
+                    "numOfResidAdvance": 0
+                }
+            }
+        }
+    },
+    "rentalData": {
+        "102": {
+            "rentId": 102,
+            "areaId": 1,
+            "description": "Shangcheng Rd No.371",
+            "latitude": 31.229335,
+            "longitude": 121.512737,
+            "squareMeter": 75,
+            "timeDepInfoMap": {
+                "2013": {
+                    "year": 2013,
+                    "canRent": true,
+                    "rate": 120
+                }
+            }
+        },
+        "100": {
+            "rentId": 100,
+            "areaId": 1,
+            "description": "Yaohan 1st floor Zone A",
+            "latitude": 31.228041,
+            "longitude": 121.51705,
+            "squareMeter": 100,
+            "timeDepInfoMap": {
+                "2013": {
+                    "year": 2013,
+                    "canRent": true,
+                    "rate": 229.2384
+                }
+            }
+        },
+        "101": {
+            "rentId": 101,
+            "areaId": 1,
+            "description": "Sine Life Tower 1st floor",
+            "latitude": 31.229583,
+            "longitude": 121.520612,
+            "squareMeter": 180,
+            "timeDepInfoMap": {
+                "2013": {
+                    "year": 2013,
+                    "canRent": true,
+                    "rate": 200
+                }
+            }
+        }
+    },
+    "storeData": {
+        "102": {
+            "rentId": 102,
+            "description": "Competitor 2",
+            "timeDepInfoMap": {
+                "2013": {
+                    "year": 2013,
+                    "competitor": true,
+                    "revenue": 0,
+                    "operationCost": 0,
+                    "commodityCost": 0,
+                    "onetimeCost": 0,
+                    "suppliers": 40,
+                    "cosmeceuticals": 30,
+                    "otc": 20,
+                    "rx": 10,
+                    "medicare": false,
+                    "numOfSales": 6
+                }
+            }
+        },
+        "101": {
+            "rentId": 101,
+            "description": "Competitor 1",
+            "timeDepInfoMap": {
+                "2013": {
+                    "year": 2013,
+                    "competitor": true,
+                    "revenue": 0,
+                    "operationCost": 0,
+                    "commodityCost": 0,
+                    "onetimeCost": 0,
+                    "suppliers": 10,
+                    "cosmeceuticals": 20,
+                    "otc": 30,
+                    "rx": 40,
+                    "medicare": true,
+                    "numOfSales": 5
+                }
+            }
+        }
+    },
+    "distanceData": [
+        {
+            "locationId": 101,
+            "rentId": 101,
+            "distance": 100
+        },
+        {
+            "locationId": 102,
+            "rentId": 102,
+            "distance": 200
+        }
+    ]
+}
