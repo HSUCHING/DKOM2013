@@ -57918,6 +57918,7 @@ OpenLayers.Icon = OpenLayers.Class({
         this.offset = offset || {x: -(this.size.w/2), y: -(this.size.h/2)};
         this.calculateOffset = calculateOffset;
 
+        //HSUCHING DIY
         //var id = OpenLayers.Util.createUniqueID("OL_Icon_");
         //var id = OpenLayers.Util.createUniqueID(idname);
         var id=idname;
