@@ -16,6 +16,27 @@ $(function () {
 });
 
 
+function loadopenlayers_map(mappoint_array) {
+
+    var mappoint = [];
+    var marker;
+    var lonlat_v;
+    Magnetic.outZ({x:390+10,y:380+10});
+
+    $.each(mappoint_array, function (idx, item) {
+        console.log(idx + ":" + item);
+        lonlat_v = new OpenLayers.LonLat(item.longitude, item.latitude).transform('EPSG:4326', map.getProjectionObject());
+        marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png');
+        markers.addMarker(marker);
+        mappoint.push(marker);
+    });
+
+//    markers.addMarkers(mappoint);
+    map.addLayer(markers);
+
+}
+
+
 //ajax httprequest
 $("#buttonContainer").click(function () {
         $.ajax({
@@ -32,6 +53,7 @@ $("#buttonContainer").click(function () {
                     locData_array.push(templocData);
                 }
                 console.log(locData_array);
+                loadopenlayers_map(locData_array);
                 $(".loadingcontainer").hide();
             },
             error:function () {

@@ -1,22 +1,13 @@
-body, html {
-    /*background-color: #222222;*/
-}
-
-
-
 canvas#world{
     background-color: #000000;
     z-index:9999;
     opacity: 0.5;
 }
-
 #panel{
     position: absolute;
     z-index:9999;
     border: 1px #000000 solid;
 }
-
-
 #seeMore {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
@@ -25,7 +16,6 @@ canvas#world{
     text-align: right;
     z-index:9999;
 }
-
 #seeMore a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
@@ -34,8 +24,6 @@ canvas#world{
     color: #999999;
     float: right;
 }
-
 #seeMore a:hover {
     color: #ffffff;
-    /*background-color: #000000;*/
 }

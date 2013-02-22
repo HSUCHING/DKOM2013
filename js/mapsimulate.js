@@ -47,7 +47,7 @@ function GetMark(lonlat, w, h, statusImg) {
     return new OpenLayers.Marker(lonlat, icon);
 }
 
-var lonlat_v = new OpenLayers.LonLat(121.51691, 31.22834).transform('EPSG:4326', map.getProjectionObject());
+//var lonlat_v = new OpenLayers.LonLat(121.51691, 31.22834).transform('EPSG:4326', map.getProjectionObject());
 
 
 //var start_point = new OpenLayers.Geometry.Point(121.554901, 25.058470).transform('EPSG:4326', map.getProjectionObject());
@@ -82,10 +82,10 @@ directionsService.route(requestdistance, function(response, status) {
 
 
 
-var marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png');
+//var marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png');
 markers = new OpenLayers.Layer.Markers("Markers");
-markers.addMarker(marker);
-map.addLayer(markers);
+//markers.addMarker(marker);
+//map.addLayer(markers);
 
 function removeAllPopup() {//移除标记信息
 
@@ -95,20 +95,21 @@ function removeAllPopup() {//移除标记信息
     }
 }
 
-var markerClickMouseDown = function (evt) {
-    removeAllPopup();
-    OpenLayers.Event.stop(evt);
-    popup = new OpenLayers.Popup("" + lonlat_v.lon + "" + lonlat_v.lat,
-        lonlat_v,
-        new OpenLayers.Size(100, 100),
-        "<div id='example'>" + this.id + "<div>",
-        true);
-    popup.setBackgroundColor("black");
-    // popup.setOpacity(0.1);
-    //popup.autoSize=true;
-    map.addPopup(popup);
-};
-marker.events.register("mousedown", marker, markerClickMouseDown);
+//var markerClickMouseDown = function (evt) {
+//    removeAllPopup();
+//    OpenLayers.Event.stop(evt);
+//    popup = new OpenLayers.Popup("" + lonlat_v.lon + "" + lonlat_v.lat,
+//        lonlat_v,
+//        new OpenLayers.Size(100, 100),
+//        "<div id='example'>" + this.id + "<div>",
+//        true);
+//    popup.setBackgroundColor("black");
+//    // popup.setOpacity(0.1);
+//    //popup.autoSize=true;
+//    map.addPopup(popup);
+//};
+//
+//marker.events.register("mousedown", marker, markerClickMouseDown);
 
 $("#button").click(function () {
     $("#drugstore").animate({

@@ -24,6 +24,8 @@ Magnetic = new(function() {
         }
         return temp_b;
     }
+
+    this.outZ=z;
     function G(a) {
 //        n = a.clientX  - (window.innerWidth - i) * 0.5;
 //        o = a.clientY  - (window.innerHeight - j) * 0.5
@@ -290,14 +292,13 @@ Magnetic = new(function() {
 //                y: (j - 300) * 0.5 + Math.random() * 300
 //            });
 
-            var tempz=z({x:390+10,y:380+10});
+//            var tempz=z({x:390+10,y:380+10});
 
-            this.temppointarray.push(tempz);
+//            this.temppointarray.push(tempz);
             C();
             setInterval(P, 1E3 / 30)
         }
     }
-
 });
 function Particle() {
     this.size = 0.5 + Math.random() * 3.5;
