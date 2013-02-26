@@ -145,9 +145,28 @@ window.onload = function () {
         }
     );
 
+
+    function aa(){
+        jumpsections={"#photo":874,"#contact":1928};
+        jumpsections["#photo"]-=$("#maincontent").scrollTop();
+        jumpsections["#contact"]-=$("#maincontent").scrollTop();
+    }
+
+    var jumpsections={"#photo":874,"#contact":1928};
+    var this_jumptemp;
     //meny navi:ul>li
     $('.meny ul li').click(function(){
-        $('#maincontent').animate({scrollTop:$($(this).children().attr('href')).offset().top},500,false);
+        this_jumptemp=$(this);
+//        $('#maincontent').animate({scrollTop:$("#maincontent").scrollTop()+$($(this).children().attr('href')).offset().top},500,false);
+        $('#maincontent').animate({
+            scrollTop:$("#maincontent").scrollTop()+jumpsections[$(this).children().attr('href')]},
+            500,
+            'swing',
+            aa
+//            function(){console.log("aa");jumpsections[this_jumptemp.children().attr('href')]=jumpsections[this_jumptemp.children().attr('href')]-$("#maincontent").scrollTop()}
+        );
+
+
     });
 };
 

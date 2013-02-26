@@ -5,156 +5,19 @@
 
 <head>
 
-    <style type="text/css">
-        #content {
-            max-width: 40em;
-            margin: 0 auto;
-            padding-top:2%;
-            text-shadow:0 1px 0 #fdfdfd;
-        }
-
-        .inner {
-            padding:0 4%;
-        }
-
-        #footer {
-            clear:both;
-            overflow:hidden;
-            border-top:1px solid #ccc;
-            margin-top:1em;
-            background:#444;
-        }
-
-        #footer .inner {
-            padding:1em;
-        }
-
-            /*
-            *Footer left content
-            */
-        #footer  #copyright-and-such {
-            float:left;
-            color:#aaa;
-            text-shadow:-1px -1px #111;
-            letter-spacing:1px;
-        }
-
-            /*
-            * Scroll to top link inside footer,
-            * but fixed relative to viewport
-            */
-        #footer #scroll-top {
-            position:fixed;
-            /* On top of everything */
-            z-index:9999;
-            bottom:0;
-            right:0;
-            margin:0.9em;
-            display:inline-block;
-            padding:0.15em 0.5em;
-            border-radius:3px;
-            color:#fafafa;
-            text-decoration:none;
-            border:1px solid transparent;
-            background:#39b5e9;
-            letter-spacing:1px;
-            text-transform:uppercase;
-        }
-
-            /*
-            * Up Arrow for the scroll top link
-            */
-        #footer #scroll-top:after {
-            content:"";
-            display:inline-block;
-            vertical-align:middle;
-            margin-left:0.35em;
-            width: 0;
-            height: 0;
-            border-left: 0.3em solid transparent;
-            border-right:  0.3em solid transparent;
-            border-bottom:  0.3em solid #fefefe;
-        }
-
-    </style>
-
-
 
 <title>Vision18 Technologies-Web design studio, web development, software development, SEO, India</title>
 
     <script type="text/javascript" src="js/jquery2.js"></script>
 
-    <link>
-
     <script>
-        function addScrollTopAnimation() {
-
-            var $scrolltop_link = $('#scroll-top');
-
-            $scrolltop_link.on( 'click' ,  function ( ev ) {
-
-                ev.preventDefault();
-
-                $( 'html, body' ).animate( {
-
-                    scrollTop: 0
-
-                }, 700 );
-
+        $(document).ready(function(){
+            console.log("hello");
+            $("#nav>ul>li>a").click(function(){
+                $('body').animate({scrollTop:$($(this).attr('href')).offset().top},500,false);
             })
+        })
 
-                // Hides the link initially
-                    .data('hidden', 1).hide();
-
-            var scroll_event_fired = false;
-
-            $(window).on('scroll', function() {
-
-                scroll_event_fired = true;
-
-            });
-
-            /*
-             Checks every 300 ms if a scroll event has been fired.
-             */
-            setInterval( function() {
-
-                if( scroll_event_fired ) {
-
-                    /*
-                     Stop code below from being executed until the next scroll event.
-                     */
-                    scroll_event_fired = false;
-
-                    var is_hidden =  $scrolltop_link.data('hidden');
-
-                    /*
-                     Display the scroll top link when the page is scrolled
-                     down the height of half a viewport from top,  Hide it otherwise.
-                     */
-                    if ( $( this ).scrollTop()  >  $( this ).height() / 2 ) {
-
-                        if( is_hidden ) {
-
-                            $scrolltop_link.fadeIn(600).data('hidden', 0);
-
-                        }
-                    }
-
-                    else {
-
-                        if( !is_hidden ) {
-
-                            $scrolltop_link.slideUp().data('hidden', 1);
-
-                        }
-                    }
-
-                }
-
-            }, 300);
-
-        }
     </script>
 
 </head>
@@ -163,35 +26,819 @@
 
 <body>
 
-<body id="page-top">
+<div id="topbar">
+
+    <ul>
+
+        <li class="about"><a href="#about"></a></li>
+
+        <li class="portfolio"><a href="#portfolio"></a></li>
+
+        <li class="services"><a href="#services"></a></li>
+
+        <li class="contact"><a href="#contact"></a></li>
+
+    </ul>
+
+</div>
+
+<div id="main">
+
+    <header>
+
+        <div id="header">
+
+            <div class="main">
+
+                <div id="headerNav"></div>
+
+            </div>
+
+            <div class="main">
+
+                <div id="logo"><a href="/"><img src="images/logo.png" alt="Vision18 Studio" id="shaker"></a></div>
+
+                <div class="col1">
+
+                    <div class="col2"></div>
+
+                    <nav>
+
+                        <div id="nav">
+
+                            <ul>
+
+                                <li><a href="#about"><img src="images/about.gif" alt=""></a></li>
+
+                                <li><a href="#portfolio"><img src="images/portfolio.gif" alt=""></a></li>
+
+                                <li><a href="#services"><img src="images/services.gif" alt=""></a></li>
+
+                                <li><a href="#contact"><img src="images/contact.gif" alt=""></a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </nav>
+
+                    <!-- End Navigation -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- End Header -->
+
+    <article>
+
+        <div id="article">
+
+            <div class="homeTitle"><h1>Welcome Guest</h1>
+
+                Business solutions leveraging Technology<br>
+
+                Seamless integration of people, process and information<br>
+
+                <cite>Count on Personalized &amp;<br>
+
+                    team productivity</cite> <br>
+
+                Virtualize your Operations <br>
+
+                Vision 18. Networking “Gateless” Gateways…</div>
+
+        </div>
+
+    </article>
+
+    <!-- End Article -->
+
+</div>
+
+<section>
 
 <div id="content">
 
-    <div class="inner">
+    <div id="newsUpdates">
 
-        ... a page to demonstrate a scroll to top animation
+        <div id="news">A new travel site on Kerala is on the wings ww.travel2kerala.in is an unique step in the direction of enlightening...<br>
+
+            <a href="http://www.vision18.co.in/corporate/">more</a></div>
+
+        <aside>
+
+            <div id="aside">
+
+                <ul class="polaroids">
+
+                    <li>
+
+                        <a href="http://www.vision18.co.in/corporate/basic-websites.htm">
+
+                            <img src="images/basic-websites.png" alt="web design company india">			</a>		</li>
+
+                    <li class="psdtohml">
+
+                        <a href="http://www.vision18.co.in/corporate/contact.php">
+
+                            <img src="images/psd-to-html.png" alt="PSD to HTML5">			</a>		</li>
+
+                    <li class="brand">
+
+                        <a href="http://www.vision18.co.in/corporate/">
+
+                            <img src="images/brand-play-ground.png" alt="web development company india">			</a>		</li>
+
+                </ul>
+
+            </div>
+
+        </aside>
 
     </div>
 
 </div>
 
-<div id="footer">
+<div id="section">
 
-    <div class="inner">
+<a name="about"></a><div id="about">
 
-        <p id="copyright-and-such">
+    <p><strong>Vision18</strong> Is a IT   firm delivering <cite class="higlights">high quality, cost effective, reliable result-oriented</cite>   web and e-commerce   solutions on time for a global clientele.   Professionalism, Skill and   Expertise are the tools we use to make the   web work for your business   bringing in maximum return on your investment   in shortest possible   time.
 
-            I'm a footer
 
-        </p>
 
-        <a id="scroll-top" href="#page-top">Top</a>
+        <br>
+
+        <br>
+
+        Our motto is <cite>"Turning Business Ideas into Business Results"</cite>. We never criticize what other companies are offering to the individuals and corporate, but we know what we have to deliver to our clients for the maximum ROI (Return on Investment). Our main focus is to facilitate our clients by latest and best solution available in the IT Industry. We believe in our client's growth and satisfaction because we know that our clients definitely grow and we will automatically grow with them. We want to be your long term business solutions provider.
+
+
+
+
+
+        <strong><br>
+
+            <br>
+
+            History</strong><br>
+
+        We are a team of   <strong>talented young blood</strong> coming together from good web developing companies   in Kerala. Divided between corporate boundaries, we remained networked   constantly through our ambitions, ideas and while sharing
+
+
+
+        sharing of expertise during   creative leisure moments.<br>
+
+        <br>
+
+        Inspired minds are driving the age according to the young CEO Shahid.   signs of his father’s business traits were seen when he tried his   hands at his very first project costing him 55,000 INR while he was in a   age of 22. From then on he carefully crafted his dream to someday be a   great businessman. Each of the V18 team has hands-on-experience over   several projects, insight and understandings of the ‘player-customer’   and a burning entrepreneurial desire bringing us to the brink of this   soft beginning. Our first client was a travel &amp; tour operator. Our   services made a great impact on his business as well as on his   customers. <strong>Vision18 achieved a small victory</strong> and a pat on the back at 3   important places where the client had his offices – Delhi, Chandigarh   and Mumbai. We are located in Cochin, South India. We have begun to   service clients from Malaysia and the Middle East through our marketing   persons in the region. </p>
+
+</div>
+
+
+
+
+
+<div id="portfolio">  <a name="portfolio"></a>
+
+    <div id="portfolioFix">
+
+        <p>We think differently for every customer. Each one is important approaching with his/her ideas, ambitions and futuristic goals. We translate them for the target audience with sharp communicative linguistics, designs, software’s and other applications which perform as a platform for multiple user interfaces. In the end, you’ve linked up with more bridges on the network.<br><br>
+
+
+
+            At Vision18 we try to commit less and provide more in terms of quality design, amount of work, and involvement in the project. We believe that true commitment is sticking to the commitment given to oneself. Now we have understood that our business is growing only because of our ethical commitment to our clients with quality service on time and each time.</p> <br>
+
+        <br>
 
     </div>
 
 </div>
 
-</body>
+<div id="feature_list">
+
+<ul id="tabs">
+
+    <li>
+
+        <a href="javascript:;"></a>	</li>
+
+    <li>
+
+        <a href="javascript:;"> </a> </li>
+
+    <li>
+
+        <a href="javascript:;">	</a> </li>
+
+
+
+</ul>
+
+<ul id="output">
+
+<li>
+
+    <div id="one" class="contentslider">
+
+        <div class="cs_wrapper">
+
+            <div class="cs_slider">
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/websites/sliding/le-touch.jpg" alt="" />
+
+                    <h2> Le-touch </h2>
+
+                    <p>
+
+                        <br>
+
+                        <strong>Works done:</strong><br><br>
+
+
+
+                        Website Development, <br>
+
+                        Visualizing &amp; Branding					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/websites/sliding/outbox.jpg" alt="" />
+
+                    <h2> Outbox </h2>
+
+                    <p>
+
+                        <br>
+
+                        <strong>Works done:</strong><br><br>
+
+
+
+                        Website Development, <br>
+
+                        Visualizing &amp; Branding					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+                    <img src="gallery/websites/sliding/nmbv.jpg" alt="" />
+
+                    <h2> NMBV </h2>
+
+                    <p>
+
+                        <br>
+
+                        <strong>Works done:</strong><br><br>
+
+
+
+                        Website Development, <br>
+
+                        Visualizing &amp; Branding					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/websites/sliding/travel2kerala.jpg" alt="" />
+
+                    <h2> Travel2Kerala </h2>
+
+                    <p>
+
+                        <br>
+
+                        <strong>Works done:</strong><br><br>
+
+
+
+                        Website Development, <br>
+
+                        Visualizing &amp; Branding					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/websites/sliding/darsana.jpg" alt="" />
+
+                    <h2> Darsana </h2>
+
+                    <p>
+
+                        <br>
+
+                        <strong>Works done:</strong><br><br>
+
+
+
+                        Website Development, <br>
+
+                        Visualizing &amp; Branding					</p>
+
+                </div><!-- End cs_article -->
+
+            </div><!-- End cs_slider -->
+
+        </div><!-- End cs_wrapper -->
+
+    </div><!-- End contentslider -->
+
+</li>
+
+<li>
+
+    <div id="two" class="contentslider">
+
+        <div class="cs_wrapper">
+
+            <div class="cs_slider">
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/logos/sliding/china.jpg" alt="" />
+
+                    <h2> Fboxx </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+                    <img src="gallery/logos/sliding/club.jpg" alt="" />
+
+                    <h2> Club </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/logos/sliding/fdm.jpg" alt="" />
+
+                    <h2> FDM </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/logos/sliding/travel2kerala.jpg" alt="" />
+
+                    <h2> Travel2kerala </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/logos/sliding/infotech.jpg" alt="" />
+
+                    <h2> Infotech </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+            </div><!-- End cs_slider -->
+
+        </div><!-- End cs_wrapper -->
+
+    </div>
+
+</li>
+
+<li>
+
+    <div id="three" class="contentslider">
+
+        <div class="cs_wrapper">
+
+            <div class="cs_slider">
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/brochures/sliding/web-makers.jpg" alt="" />
+
+                    <h2> Web Makers </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/brochures/sliding/eboxx.jpg" alt="" />
+
+                    <h2> Eboxx </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+                    <img src="gallery/brochures/sliding/fdm.jpg" alt="" />
+
+                    <h2> FDM </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/brochures/sliding/l2.jpg" alt="" />
+
+                    <h2> L2 </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+                <div class="cs_article">
+
+
+
+
+
+                    <img src="gallery/brochures/sliding/x-banner.jpg" alt="" />
+
+                    <h2> NMBV </h2>
+
+                    <p><br>
+
+                        Woks Done<br><br>
+
+
+
+                        Identity,<br>
+
+                        Branding,<br>
+
+                        Designing 					</p>
+
+                </div><!-- End cs_article -->
+
+
+
+
+
+            </div><!-- End cs_slider -->
+
+        </div><!-- End cs_wrapper -->
+
+    </div>
+
+</li>
+
+</ul>
+
+
+
+</div>
+
+<a href="http://www.vision18.co.in/corporate/portfolio.htm" class="corpNav"></a>
+
+
+
+<div id="services"> <a name="services"></a>
+
+    <div id="servcicesFix">WEB DEVELOPMENT | GRAPHIC DESIGNING  | SW DEVELOPMENT | SEO BRANDING | SYSTEM ADMINISTRATION AND COUNTING..<br><br>
+
+        We think differently for every customer. Each one is important to us approaching with his/her ideas, ambitions and futuristic goals. We translate them for the target audience with sharp communicative linguistics, designs, softwares and other applications which perform as a platform for multiple user interface. In the end, you’ve linked up with more bridges on the network.<br>
+
+        <br>
+
+
+
+        <ul>
+
+            <li>We develop top quality User Interface Designs</li>
+
+            <li>Protocols -  We follow a 9 step Quality Assessment procedure. We observe high standards, a few we state:</li>
+
+            <li>Design, use of safe colours, consistency in visual spread</li>
+
+            <li>Choice of fonts, styles and their sizes, adopt search supportive web content</li>
+
+            <li>Emphasize importance on easy navigation from page to page</li>
+
+            <li>Ensure latest web standards in HTML coding, W3C standards. Coded either using div or table. </li>
+
+            <li>Use appropriate industry tags and meta tags for HTML</li>
+
+        </ul>
+
+
+
+        <br>
+
+        <br>
+
+        <a href="http://www.vision18.co.in/corporate/service.htm" class="corpNav"></a>
+
+    </div>
+
+</div>
+
+<div id="contact"><a name="contact"></a>
+
+    <br><br><br><br><br><br><br>
+
+
+
+
+
+    <form id="form1" action="" onSubmit="return chkForm(this)" name="form1" method="post" >
+
+        <div class="contactForm">
+
+            <div class="contactForm">
+
+                <div class="contactFormcol1">Name</div>
+
+                <div class="contactForm">
+
+                    <input type="text" class="cffld1" id="name" name="name" value="" />
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contactForm">
+
+                <div class="contactFormcol1">Email</div>
+
+                <div class="contactForm">
+
+                    <input type="text" class="cffld1" id="email" name="email" value="" />
+
+                </div>
+
+            </div>
+
+            <div class="contactForm">
+
+                <div class="contactFormcol1">Message</div>
+
+                <div class="contactForm">
+
+                    <textarea name="message" cols="4" rows="5" class="cffld2" id="message"></textarea>
+
+                </div>
+
+            </div>
+
+            <div class="contactForm" style="padding-top:10px;">
+
+                <div class="contactFormcol1">Verify
+
+                </div>
+
+                <div class="cfCaptcha">
+
+                    <input type="text" class="cffld3" id="captcha" name="captcha" /><img src="php_captcha.php"></div>
+
+            </div>
+
+            <div class="contactForm">
+
+                <div class="cfButton">
+
+                    <input name="image" type="image" src="images/submit.png" alt="" />
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+    <div id="footer">
+
+        <div id="footerContainer">
+
+            <div id="footerMain">
+
+                <div id="legal">Copyright © 2010 vision18. All rights reserved.</div>
+
+                <div id="footerNav">
+
+                    <img src="images/table-footer.png" alt="">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<a href="#" id="toTop"></a>
 
 </body>
 
