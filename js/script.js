@@ -21,18 +21,23 @@ function loadopenlayers_map(mappoint_array) {
     var mappoint = [];
     var marker;
     var lonlat_v;
-    Magnetic.outZ({x:390+10,y:380+10});
+
 
     $.each(mappoint_array, function (idx, item) {
         console.log(idx + ":" + item);
         lonlat_v = new OpenLayers.LonLat(item.longitude, item.latitude).transform('EPSG:4326', map.getProjectionObject());
-        marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png');
+        marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png',"drugstore_"+idx);
         markers.addMarker(marker);
         mappoint.push(marker);
     });
 
 //    markers.addMarkers(mappoint);
     map.addLayer(markers);
+
+    $.each(mappoint,function(idx,item){
+        Magnetic.temppointarray.push(Magnetic.outZ({x:$("#"+item.icon.id).position().left+10,y:$("#"+item.icon.id).position().top+10}));
+
+    });
 
 }
 
@@ -139,4 +144,12 @@ window.onload = function () {
             });
         }
     );
+
+    //meny navi:ul>li
+    $('.meny ul li').click(function(){
+        $('#maincontent').animate({scrollTop:$($(this).children().attr('href')).offset().top},500,false);
+    });
 };
+
+
+

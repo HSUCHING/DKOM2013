@@ -40,10 +40,10 @@ map.addControl(new OpenLayers.Control.LayerSwitcher());
 
 //    add marker layer
 
-function GetMark(lonlat, w, h, statusImg) {
+function GetMark(lonlat, w, h, statusImg,idname) {
     var size = new OpenLayers.Size(w, h);
     var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
-    var icon = new OpenLayers.Icon('img/drugstore.png', size, offset, "drugstore");
+    var icon = new OpenLayers.Icon('img/drugstore.png', size, offset, idname);
     return new OpenLayers.Marker(lonlat, icon);
 }
 

@@ -57921,8 +57921,10 @@ OpenLayers.Icon = OpenLayers.Class({
         //HSUCHING DIY
         //var id = OpenLayers.Util.createUniqueID("OL_Icon_");
         //var id = OpenLayers.Util.createUniqueID(idname);
-        var id=idname;
-        this.imageDiv = OpenLayers.Util.createAlphaImageDiv(id);
+        this.id=idname;
+        //this.imageDiv = OpenLayers.Util.createAlphaImageDiv(id);
+        this.imageDiv = OpenLayers.Util.createAlphaImageDiv(this.id);
+
     },
     
     /** 

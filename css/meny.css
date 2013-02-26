@@ -30,8 +30,8 @@ body {
 	color: #222;
 }
 
-a {
-	color: #c2575b;
+.meny a {
+	color: #54a6de;
 	text-decoration: none;
 
 	-webkit-transition: 0.15s color ease;
@@ -40,8 +40,8 @@ a {
 	     -o-transition: 0.15s color ease;
 	        transition: 0.15s color ease;
 }
-	a:hover {
-		color: #f76f76;
+.meny a:hover {
+		color: #c2575b;
 	}
 
 h1, 
@@ -75,7 +75,6 @@ h2 {
 				margin-right: 5px;
 				color: rgba( 255, 255, 255, 0.2 );
 			}
-
 /**
  * Hint graphic that appears while menu is inactive
  */

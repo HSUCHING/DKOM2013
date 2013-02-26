@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1439f7e-e578-4b05-bbc6-f9f71dcbe778" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/contact.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/all.css" afterPath="$PROJECT_DIR$/css/all.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/magnetic.css" afterPath="$PROJECT_DIR$/css/magnetic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magnetic.js" afterPath="$PROJECT_DIR$/js/magnetic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/map.css" afterPath="$PROJECT_DIR$/css/map.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/meny.css" afterPath="$PROJECT_DIR$/css/meny.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/OpenLayers/OpenLayers.debug.js" afterPath="$PROJECT_DIR$/js/OpenLayers/OpenLayers.debug.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mapsimulate.js" afterPath="$PROJECT_DIR$/js/mapsimulate.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jump.html" afterPath="$PROJECT_DIR$/jump.html" />
     </list>
     <ignored path="DKOM2013.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,45 +32,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="jump.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jump.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="18" selection-start="203" selection-end="203" vertical-scroll-proportion="-4.321429">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="39" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+            <state line="62" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.7186046">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="magnetic.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/magnetic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="21" selection-start="356" selection-end="356" vertical-scroll-proportion="0.45360824">
-              <folding>
-                <element signature="e#886#933#0" expanded="false" />
-                <element signature="e#951#1443#0" expanded="false" />
-                <element signature="e#1461#1612#0" expanded="false" />
-                <element signature="e#1631#1713#0" expanded="false" />
-                <element signature="e#1732#1971#0" expanded="false" />
-                <element signature="e#1990#2212#0" expanded="false" />
-                <element signature="e#2230#2381#0" expanded="false" />
-                <element signature="e#2400#2451#0" expanded="false" />
-                <element signature="e#2470#2518#0" expanded="false" />
-                <element signature="e#2537#2725#0" expanded="false" />
-                <element signature="e#2743#3601#0" expanded="false" />
-                <element signature="e#3619#6531#0" expanded="false" />
-                <element signature="e#6553#6654#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -82,30 +54,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/json/demo.json" />
-        <option value="$PROJECT_DIR$/json/sp500.csv" />
-        <option value="$PROJECT_DIR$/svgdemo.html" />
-        <option value="$USER_HOME$/workspace/KPI_Dashboard/WebContent/InnovationFinDashBoard/index.html" />
         <option value="$PROJECT_DIR$/js/Loading.js" />
         <option value="$PROJECT_DIR$/Loading.html" />
         <option value="$PROJECT_DIR$/js/OpenLayers/OpenLayers.js" />
-        <option value="$PROJECT_DIR$/js/OpenLayers/OpenLayers.debug.js" />
         <option value="$PROJECT_DIR$/Login.html" />
-        <option value="$PROJECT_DIR$/css/all.css" />
         <option value="$PROJECT_DIR$/css/loading.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/magnetic.css" />
+        <option value="$PROJECT_DIR$/js/OpenLayers/OpenLayers.debug.js" />
         <option value="$PROJECT_DIR$/js/mapsimulate.js" />
-        <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/js/magnetic.js" />
+        <option value="$PROJECT_DIR$/css/magnetic.css" />
+        <option value="$PROJECT_DIR$/css/all.css" />
+        <option value="$PROJECT_DIR$/css/map.css" />
+        <option value="$PROJECT_DIR$/css/meny.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/contact.css" />
+        <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/jump.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-540" />
-    <option name="y" value="34" />
-    <option name="width" value="1600" />
-    <option name="height" value="879" />
+    <option name="x" value="723" />
+    <option name="y" value="35" />
+    <option name="width" value="1707" />
+    <option name="height" value="1078" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -271,14 +243,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-540" y="34" width="1600" height="879" extended-state="1" />
+    <frame x="723" y="35" width="1707" height="1078" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15118514" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14148681" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -343,133 +315,36 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/magnetic.js</url>
-          <line>8</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/Loading.js">
+    <entry file="file://$PROJECT_DIR$/js/meny.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="4" selection-start="278" selection-end="278" vertical-scroll-proportion="0.4409091">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-17.517084">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="203" selection-end="203" vertical-scroll-proportion="0.2615156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Loading.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="288" selection-end="325" vertical-scroll-proportion="0.5482866">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/OpenLayers/OpenLayers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11656" column="0" selection-start="644025" selection-end="644025" vertical-scroll-proportion="0.35433072">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1361519342706" expanded="false" signature="426942:426961" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="12" selection-start="1013" selection-end="1013" vertical-scroll-proportion="34.160713">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/magnetic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="163" selection-end="163" vertical-scroll-proportion="0.2615156">
+        <state line="11" column="8" selection-start="205" selection-end="205" vertical-scroll-proportion="0.27160493">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/loading.css">
+    <entry file="file://$PROJECT_DIR$/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="225" selection-end="225" vertical-scroll-proportion="0.3922734">
+        <state line="9" column="22" selection-start="228" selection-end="228" vertical-scroll-proportion="0.22222222">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/d3.v2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/demo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="341" column="19" selection-start="10026" selection-end="10032" vertical-scroll-proportion="-0.92867756">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/meny.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.2">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/impress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mapsimulate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="20" selection-start="1396" selection-end="1396" vertical-scroll-proportion="-0.96666664">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="203" selection-end="203" vertical-scroll-proportion="-4.321429">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/magnetic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="356" selection-end="356" vertical-scroll-proportion="0.45360824">
+        <state line="296" column="14" selection-start="9942" selection-end="9974" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#886#933#0" expanded="false" />
             <element signature="e#951#1443#0" expanded="false" />
@@ -485,6 +360,90 @@
             <element signature="e#3619#6531#0" expanded="false" />
             <element signature="e#6553#6654#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mapsimulate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="3385" selection-end="3385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/map.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="14" selection-start="214" selection-end="214" vertical-scroll-proportion="0.32098764">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/contact.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="1" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/meny.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="1" selection-start="1155" selection-end="1155" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="20" selection-start="3377" selection-end="3388" vertical-scroll-proportion="51.032257">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="31" selection-start="3860" selection-end="3860" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Impressive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dropdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Loading.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="238" selection-end="261" vertical-scroll-proportion="0.17906977">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jump.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.7186046">
+          <folding />
         </state>
       </provider>
     </entry>
