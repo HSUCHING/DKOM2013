@@ -159,7 +159,7 @@ window.onload = function () {
         this_jumptemp=$(this);
 //        $('#maincontent').animate({scrollTop:$("#maincontent").scrollTop()+$($(this).children().attr('href')).offset().top},500,false);
         $('#maincontent').animate({
-            scrollTop:$("#maincontent").scrollTop()+jumpsections[$(this).children().attr('href')]},
+            scrollTop:$("#maincontent").scrollTop()+jumpsections[$(this).children().attr('href')]+30},
             500,
             'swing',
             aa
