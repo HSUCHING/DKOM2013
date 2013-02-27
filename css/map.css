@@ -13,3 +13,12 @@
     position: absolute;
     top:200px;
 }
+
+#maparea{
+    opacity: 0.0;
+}
+
+#world{
+    opacity: 0.0;
+    /*display: none;*/
+}

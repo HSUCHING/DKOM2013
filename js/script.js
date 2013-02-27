@@ -26,7 +26,7 @@ function loadopenlayers_map(mappoint_array) {
     $.each(mappoint_array, function (idx, item) {
         console.log(idx + ":" + item);
         lonlat_v = new OpenLayers.LonLat(item.longitude, item.latitude).transform('EPSG:4326', map.getProjectionObject());
-        marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png',"drugstore_"+idx);
+        marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png', "drugstore_" + idx);
         markers.addMarker(marker);
         mappoint.push(marker);
     });
@@ -34,11 +34,9 @@ function loadopenlayers_map(mappoint_array) {
 //    markers.addMarkers(mappoint);
     map.addLayer(markers);
 
-    $.each(mappoint,function(idx,item){
-        Magnetic.temppointarray.push(Magnetic.outZ({x:$("#"+item.icon.id).position().left+10,y:$("#"+item.icon.id).position().top+10}));
-
+    $.each(mappoint, function (idx, item) {
+        Magnetic.temppointarray.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10}));
     });
-
 }
 
 
@@ -59,6 +57,7 @@ $("#buttonContainer").click(function () {
                 }
                 console.log(locData_array);
                 loadopenlayers_map(locData_array);
+                jumpsections = {"#photo":$('#photo').offset().top, "#contact":$('#contact').offset().top};
                 $(".loadingcontainer").hide();
             },
             error:function () {
@@ -66,6 +65,8 @@ $("#buttonContainer").click(function () {
                 $(".loadingcontainer").hide();
             },
             beforeSend:function () {
+                $('#world').css({"z-index":9999});
+                $('#world').animate({"opacity":0.5}, 500, 'swing');
                 $(".loadingcontainer").show();
             }
         });
@@ -113,6 +114,8 @@ if ($.fn.makisu.enabled) {
 var pp = $('#push').pointPoint();
 
 
+jumpsections = {"photo":0, "contact":0};
+
 window.onload = function () {
     $('.cd-dropdown>ul').children().click(
         function () {
@@ -136,33 +139,32 @@ window.onload = function () {
                     opacity:1.0,
                     right:'0'
                 }, 1000, "swing", function () {
+                    $('#maparea').animate({"opacity":1.0}, 500, 'swing');
                     $('#buttonContainer').fadeIn(1000, 'swing');
                 });
-            });
-            $('#buttonContainer').click(function () {
-                alert("click");
             });
         }
     );
 
 
-    function aa(){
-        jumpsections={"#photo":874,"#contact":1928};
-        jumpsections["#photo"]-=$("#maincontent").scrollTop();
-        jumpsections["#contact"]-=$("#maincontent").scrollTop();
-    }
 
-    var jumpsections={"#photo":874,"#contact":1928};
-    var this_jumptemp;
+//    function aa(){
+//        jumpsections={"#photo":874,"#contact":1928};
+//        jumpsections["#photo"]-=$("#maincontent").scrollTop();
+//        jumpsections["#contact"]-=$("#maincontent").scrollTop();
+//    }
+//
+
+//    var this_jumptemp;
     //meny navi:ul>li
-    $('.meny ul li').click(function(){
-        this_jumptemp=$(this);
+    $('.meny ul li').click(function () {
+        this_jumptemp = $(this);
 //        $('#maincontent').animate({scrollTop:$("#maincontent").scrollTop()+$($(this).children().attr('href')).offset().top},500,false);
         $('#maincontent').animate({
-            scrollTop:$("#maincontent").scrollTop()+jumpsections[$(this).children().attr('href')]+30},
-            500,
-            'swing',
-            aa
+                scrollTop:jumpsections[$(this).children().attr('href')] - 20},
+            800,
+            'swing'
+//            aa
 //            function(){console.log("aa");jumpsections[this_jumptemp.children().attr('href')]=jumpsections[this_jumptemp.children().attr('href')]-$("#maincontent").scrollTop()}
         );
 
