@@ -1,21 +1,4 @@
-//impress
-$(function () {
-
-    var imp = impress();
-
-    $('#arrowLeft').click(function (e) {
-        imp.prev();
-        e.preventDefault();
-    });
-
-    $('#arrowRight').click(function (e) {
-        imp.next();
-        e.preventDefault();
-    });
-
-});
-
-
+//loadmap
 function loadopenlayers_map(mappoint_array) {
 
     var mappoint = [];
@@ -33,7 +16,6 @@ function loadopenlayers_map(mappoint_array) {
 
 //    markers.addMarkers(mappoint);
     map.addLayer(markers);
-
     $.each(mappoint, function (idx, item) {
         Magnetic.temppointarray.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10}));
     });
@@ -147,7 +129,6 @@ window.onload = function () {
     );
 
 
-
 //    function aa(){
 //        jumpsections={"#photo":874,"#contact":1928};
 //        jumpsections["#photo"]-=$("#maincontent").scrollTop();
@@ -160,15 +141,15 @@ window.onload = function () {
     $('.meny ul li').click(function () {
         this_jumptemp = $(this);
 //        $('#maincontent').animate({scrollTop:$("#maincontent").scrollTop()+$($(this).children().attr('href')).offset().top},500,false);
-        $('#maincontent').animate({
-                scrollTop:jumpsections[$(this).children().attr('href')] - 20},
+        $('#maincontent').animate(
+            {
+                scrolltop:jumpsections[$(this).children().attr('href')] - 20
+            },
             800,
             'swing'
 //            aa
 //            function(){console.log("aa");jumpsections[this_jumptemp.children().attr('href')]=jumpsections[this_jumptemp.children().attr('href')]-$("#maincontent").scrollTop()}
         );
-
-
     });
 };
 
