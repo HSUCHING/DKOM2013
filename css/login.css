@@ -38,7 +38,7 @@ body{
     margin-right: auto;
 }
 
-.login{
+.login,.register{
     background-color: #000;
     color: #DDDDDD;
     font-family: 'Helvetica', 'Lucida Grande', 'Arial', sans-serif;
@@ -48,10 +48,19 @@ body{
     -moz-box-shadow: 10px 10px 10px rgba(0,0,0,1) inset, -9px -9px 8px rgba(0,0,0,1) inset;
     -webkit-box-shadow: 8px 8px 8px rgba(0,0,0,1) inset, -9px -9px 8px rgba(0,0,0,1) inset;
     box-shadow: 8px 8px 8px rgba(0,0,0,1) inset, -9px -9px 8px rgba(0,0,0,1) inset;
+    /*margin: 100px auto;*/
+}
+.login{
     margin: 100px auto;
+    z-index: 22;
+}
+.register{
+    z-index: 21;
+    margin: -362px auto;
+    opacity: 0;
 }
 
-.loginborder{
+.loginborder,.registerborder{
     height: 100%;
     width: 100%;
     padding: 3px;
@@ -60,7 +69,7 @@ body{
     border-radius: 5px;
 }
 
-.loginborder.start{
+.loginborder.startm.registerborder.start{
     background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
     background-position: 0 0, 0 0, 0 0, 0 0;
     /* Blue-ish Green Fallback for Mozilla */
@@ -86,7 +95,7 @@ body{
     100% {background-color: #39f;}
 }
 
-.loginborder,.login{
+.loginborder,.login,.register,.registerborder{
     -webkit-animation-direction: normal;
     -webkit-animation-duration: 20s;
     -webkit-animation-iteration-count: infinite;
@@ -94,7 +103,7 @@ body{
     -webkit-animation-timing-function: ease;
 }
 
-.loginborder header{
+.loginborder header,.registerborder header{
     text-align: center;
     padding-top: 20px;
     margin-bottom: 20px;
@@ -103,14 +112,14 @@ body{
 
 
 /* In-Active State Style */
-.loginborder.unfocus{
+.loginborder.unfocus,.registerborder.unfocus{
     background: #333 !important;
     -moz-box-shadow: 0px 0px 15px rgba(255,255,255,.2);
     -webkit-box-shadow: 0px 0px 15px rgba(255,255,255,.2);
     box-shadow: 0px 0px 15px rgba(255,255,255,.2);
     -webkit-animation-name: none;
 }
-.loginborder.start.unfocus{
+.loginborder.start.unfocus,.loginborder.start.unfocus{
     background: #000 !important;
     -webkit-animation-name: none;
 }
@@ -118,7 +127,7 @@ body{
 
 
 /* Regular Form Styles */
-.loginborder form{
+.loginborder form,.registerborder form{
     background: #212121;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -128,13 +137,13 @@ body{
     background: -moz-radial-gradient(50% 46% 90deg,circle closest-corner, #242424, #090909);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 150, from(#242424), to(#090909));
 }
-.loginborder form label{
+.loginborder form label,.registerborder form label{
     display: block;
     padding: 10px 10px 5px 15px;
     font-size: 11px;
     color: #777;
 }
-.loginborder form input{
+.loginborder form input,.registerborder form input{
     display: block;
     margin: 5px 10px 10px 15px;
     width: 85%;
@@ -149,11 +158,11 @@ body{
     color: #444;
     font-size: 16px;
 }
-.loginborder form input:focus{
+.loginborder form input:focus,.registerborder form input:focus{
     outline: 1px solid #555;
     color: #FFF;
 }
-.login input[type="submit"]{
+.login input[type="submit"],.register input[type="submit"]{
     color: #999;
     padding: 5px 10px;
     float: right;
@@ -252,4 +261,65 @@ body{
     cursor: pointer;
     background-image: url("../img/closer.png");
     background-size: contain;
+}
+
+
+/*animate*/
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes fadeOutLeftBig {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+    }
+}
+
+
+#toregister:target ~ .forkit-curtain .register,
+#tologin:target ~ .forkit-curtain .login{
+    z-index: 22;
+    -webkit-animation-name: fadeInLeft;
+    -webkit-animation-delay: .1s;
+
+}
+#toregister:target ~ .forkit-curtain .login,
+#tologin:target ~ .forkit-curtain .register{
+    -webkit-animation-name: fadeOutLeftBig;
+}
+
+.animate{
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-fill-mode: both;
+
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: ease;
+    -o-animation-fill-mode: both;
+
+    -ms-animation-duration: 1s;
+    -ms-animation-timing-function: ease;
+    -ms-animation-fill-mode: both;
+
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
 }

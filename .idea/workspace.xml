@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1439f7e-e578-4b05-bbc6-f9f71dcbe778" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/fontomas-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/fontomas-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/closer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/tab_l.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/tab_r.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DemoLogin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/fontomas-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/forkit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DemoLogin.html" afterPath="$PROJECT_DIR$/DemoLogin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/login.css" afterPath="$PROJECT_DIR$/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mapsimulate.js" afterPath="$PROJECT_DIR$/js/mapsimulate.js" />
     </list>
     <ignored path="DKOM2013.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +23,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DemoLogin.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DemoLogin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DemoLogin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="18" selection-start="226" selection-end="226" vertical-scroll-proportion="0.24386252">
+            <state line="37" column="30" selection-start="1604" selection-end="1604" vertical-scroll-proportion="-19.161291">
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -44,19 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forkit.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/forkit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="0" selection-start="3881" selection-end="3881" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="login.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="14" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
+            <state line="304" column="8" selection-start="8031" selection-end="8038" vertical-scroll-proportion="0.69158876">
               <folding />
             </state>
           </provider>
@@ -89,15 +70,15 @@
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/js/mapsimulate.js" />
         <option value="$PROJECT_DIR$/js/forkit.js" />
-        <option value="$PROJECT_DIR$/DemoLogin.html" />
         <option value="$PROJECT_DIR$/css/login.css" />
+        <option value="$PROJECT_DIR$/DemoLogin.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="753" />
-    <option name="y" value="36" />
-    <option name="width" value="1312" />
+    <option name="x" value="87" />
+    <option name="y" value="22" />
+    <option name="width" value="1397" />
     <option name="height" value="803" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -267,13 +248,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="753" y="36" width="1312" height="803" extended-state="0" />
+    <frame x="87" y="22" width="1397" height="803" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2094647" sideWeight="0.94562334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19650654" sideWeight="0.94562334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -443,19 +424,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DemoLogin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="226" selection-end="226" vertical-scroll-proportion="0.24386252">
+        <state line="37" column="30" selection-start="1604" selection-end="1604" vertical-scroll-proportion="-19.161291">
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="304" column="8" selection-start="8031" selection-end="8038" vertical-scroll-proportion="0.69158876">
+          <folding />
         </state>
       </provider>
     </entry>

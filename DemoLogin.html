@@ -7,10 +7,10 @@
 <body>
 
 <div class="forkit-curtain">
-    <div class="login">
+    <div id="login" class="animate">
         <div class="loginborder start">
             <form>
-                <header>DKOM 2013</header>
+                <header>DKOM 2013 login</header>
                 <label for="username" data-icon="u"> Your email or username:</label>
                 <input data-icon="u" name="username" type="text" required="required" placeholder="myusername or mymail@mail.com"/>
                 <label for="password" data-icon="p">Password:</label>
@@ -18,6 +18,26 @@
             </form>
         </div>
         <input type="submit" value="LOG IN"/>
+        <p class="change_link">
+            Not a member yet ?
+            <a href="#toregister" class="to_register">Join us</a>
+        </p>
+    </div>
+    <div id="register" class="animate">
+        <div class="registerborder start">
+            <form>
+                <header>DKOM 2013 register</header>
+                <label for="username" data-icon="u"> Your email or username:</label>
+                <input data-icon="u" name="username" type="text" required="required" placeholder="myusername or mymail@mail.com"/>
+                <label for="password" data-icon="p">Password:</label>
+                <input name="password" type="password" required="required" placeholder="eg. A3!HJY76xm"/>
+            </form>
+        </div>
+        <input type="submit" value="LOG IN"/>
+        <p class="change_link">
+            Already a member ?
+            <a href="#tologin" class="to_register"> Go and log in </a>
+        </p>
     </div>
     <div class="close-button"></div>
     <!--<button id="bt">button</button>-->
