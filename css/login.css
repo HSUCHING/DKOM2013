@@ -12,7 +12,7 @@
 
 
 body{
-    /*background-color: #000;*/
+    background-color: ;
     color: #DDDDDD;
 }
 
@@ -32,7 +32,7 @@ body{
     position: absolute;
     top:0;
     width: 100%;
-    z-index: 999;
+    z-index: 20;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -40,10 +40,12 @@ body{
 
 .login,.register{
     background-color: #000;
+    position: absolute;
     color: #DDDDDD;
     font-family: 'Helvetica', 'Lucida Grande', 'Arial', sans-serif;
     height:240px;
     width:360px;
+    display: block;
     padding: 10px 12px 12px 10px;
     -moz-box-shadow: 10px 10px 10px rgba(0,0,0,1) inset, -9px -9px 8px rgba(0,0,0,1) inset;
     -webkit-box-shadow: 8px 8px 8px rgba(0,0,0,1) inset, -9px -9px 8px rgba(0,0,0,1) inset;
@@ -51,12 +53,16 @@ body{
     /*margin: 100px auto;*/
 }
 .login{
-    margin: 100px auto;
+    margin-top: 10%;
+    margin-left: 35%;
     z-index: 22;
 }
 .register{
     z-index: 21;
-    margin: -362px auto;
+    height:380px;
+    /*margin: 0 auto;*/
+    margin-top: 10%;
+    margin-left: 35%;
     opacity: 0;
 }
 
@@ -95,9 +101,9 @@ body{
     100% {background-color: #39f;}
 }
 
-.loginborder,.login,.register,.registerborder{
+.loginborder,.registerborder{
     -webkit-animation-direction: normal;
-    -webkit-animation-duration: 20s;
+    -webkit-animation-duration: 20s !important;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-name: loginstyle;
     -webkit-animation-timing-function: ease;
@@ -182,6 +188,11 @@ body{
     text-shadow: 0 1px 1px #000;
 }
 
+.hiddenanchor{
+    display: none;
+}
+
+
 /*forkit*/
 .forkit {
     position: absolute;
@@ -191,7 +202,7 @@ body{
     width: 200px;
     height: 150px;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', Times, 'Times New Roman', serif;
     text-decoration: none;
 }
 .forkit .tag {
@@ -229,7 +240,7 @@ body{
     width: 0px;
     position: absolute;
 
-    background: rgba( 255, 255, 255, 0.7 );
+    background: rgba( 116, 0, 0, 0.7 );
     box-shadow: 0px 0px 10px rgba( 0, 0, 0, 0.4 );
 
     -webkit-transform-origin: 0px 0px;
@@ -277,28 +288,56 @@ body{
     }
 }
 
-@-webkit-keyframes fadeOutLeftBig {
-    0% {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-    }
+@-webkit-keyframes fadeInLeftBig {
+	0% {
+		opacity: 0;
+		display:none;
+		-webkit-transform: translateX(-2000px);
+	}
 
-    100% {
-        opacity: 0;
-        -webkit-transform: translateX(-2000px);
-    }
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
 }
 
 
-#toregister:target ~ .forkit-curtain .register,
-#tologin:target ~ .forkit-curtain .login{
+@-webkit-keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		display:
+		-webkit-transform: translateX(-20px);
+	}
+}
+
+
+@-webkit-keyframes fadeOutLeftBig {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(-2000px);
+	}
+}
+
+
+#toregister:target ~ .register,
+#tologin:target ~ .login{
     z-index: 22;
     -webkit-animation-name: fadeInLeft;
     -webkit-animation-delay: .1s;
 
 }
-#toregister:target ~ .forkit-curtain .login,
-#tologin:target ~ .forkit-curtain .register{
+#toregister:target ~ .login,
+#tologin:target ~ .register{
     -webkit-animation-name: fadeOutLeftBig;
 }
 
@@ -306,20 +345,17 @@ body{
     -webkit-animation-duration: 1s;
     -webkit-animation-timing-function: ease;
     -webkit-animation-fill-mode: both;
+}
 
-    -moz-animation-duration: 1s;
-    -moz-animation-timing-function: ease;
-    -moz-animation-fill-mode: both;
-
-    -o-animation-duration: 1s;
-    -o-animation-timing-function: ease;
-    -o-animation-fill-mode: both;
-
-    -ms-animation-duration: 1s;
-    -ms-animation-timing-function: ease;
-    -ms-animation-fill-mode: both;
-
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
+.fadeOutLeft {
+    -webkit-animation-name: fadeOutLeft;
+}
+.fadeOutLeftBig {
+    -webkit-animation-name: fadeOutLeftBig;
+}
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+}
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
 }
