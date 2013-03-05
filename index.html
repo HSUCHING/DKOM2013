@@ -11,7 +11,6 @@
 <body id="bdid">
 
 <!--first section: navigation-->
-
 <div class="meny">
     <h2>More Function</h2>
     <ul>
@@ -135,10 +134,6 @@
                     <option value="changning" class="icon-twitter">长宁区</option>
                     <option value="huangpu" class="icon-github">黄浦区</option>
                     <option value="putuo" class="icon-github">普陀区</option>
-                    <option value="zabei" class="icon-github">闸北区</option>
-                    <option value="luwan" class="icon-github">卢湾区</option>
-                    <option value="xuhui" class="icon-github">徐汇区</option>
-                    <option value="yangpu" class="icon-github">杨浦区</option>
                 </select>
             </div>
         </section>
@@ -200,6 +195,57 @@
     </ul>
 </div>
 
+<!--fourth section: forkitcurtain-->
+<div class="forkit-curtain">
+    <a class="hiddenanchor" id="toregister"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+
+    <div id="login" class="login animate">
+        <div class="loginborder start">
+            <form>
+                <header>DKOM 2013 login</header>
+                <label for="username" data-icon="u"> Your email or username:</label>
+                <input name="username" id="lguser" type="text" required="required"
+                       placeholder="myusername or mymail@mail.com"/>
+                <label for="password" data-icon="p">Password:</label>
+                <input name="password" id="lgpw" type="password" required="required" placeholder="eg. A3!HJY76xm"/>
+            </form>
+            <input type="submit" id="loginbt" value="LOG IN"/>
+        </div>
+        <p class="change_link">
+            Not a member yet ?
+            <a href="#toregister" class="to_register">Join us</a>
+        </p>
+    </div>
+    <div id="register" class="register animate">
+        <div class="registerborder start">
+            <form>
+                <header>DKOM 2013 register</header>
+                <label data-icon="u" for="username"> Your username:</label>
+                <input name="username" type="text" required="required" placeholder="myusername"/>
+                <label data-icon="u" for="useremail"> Your email:</label>
+                <input name="email" type="text" required="required" placeholder="mymail@mail.com"/>
+                <label data-icon="p" for="password">Password:</label>
+                <input name="password" type="password" required="required" placeholder="eg. A3!HJY76xm"/>
+                <label data-icon="p" for="confirmpassword">Confirm Password:</label>
+                <input name="conmfirmpassword" type="password" required="required" placeholder="eg. A3!HJY76xm"/>
+            </form>
+            <input type="submit" value="LOG IN"/>
+        </div>
+        <p class="change_link">
+            Already a member ?
+            <a href="#tologin" class="to_register"> Go log in </a>
+        </p>
+    </div>
+    <div class="close-button"></div>
+</div>
+
+<!-- The ribbon -->
+<a class="forkit" data-text="Login in/Register" data-text-detached="Drag down >"
+   href="#"><img style="position: absolute; top: 0; right: 0; border: 0;"
+                 src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+                 alt="Fork me on GitHub"></a>
+
 
 <!--import javascript-->
 
@@ -216,5 +262,6 @@
 <script src="js/magnetic.js"></script>
 <script src="js/Loading.js"></script>
 <script src="js/script.js"></script>
+<script src="js/forkit.js"></script>
 </body>
 </html>

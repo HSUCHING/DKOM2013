@@ -68,6 +68,9 @@
 		dom.curtain = document.querySelector( '.forkit-curtain' );
 		dom.closeButton = document.querySelector( '.forkit-curtain .close-button' );
 
+//        Hsuching
+        $('#loginbt').click(loginsuccess);
+
 		if( dom.ribbon ) {
 
 			// Fetch label texts from DOM
@@ -88,6 +91,7 @@
 			document.addEventListener( 'touchstart', onTouchStart, false);
 			document.addEventListener( 'touchmove', onTouchMove, false);
 			document.addEventListener( 'touchend', onTouchEnd, false);
+
 			window.addEventListener( 'resize', layout, false );
 
 			if( dom.closeButton ) {
@@ -163,6 +167,21 @@
 		event.preventDefault();
 		close();
 	}
+
+
+//    Hsuching
+    function loginsuccess(){
+        if($('#lguser').val()=="SAP"&&$('#lgpw').val()=="123456"){
+            close();
+        }else{
+            $('#login').addClass('shake');
+            window.setTimeout(function () {
+                    $('#login').removeClass('shake')
+                },
+                1300
+            );
+        }
+    }
 
 	function layout() {
 		if( state === STATE_OPENED ) {
@@ -349,7 +368,6 @@
 				window.oRequestAnimationFrame		||
 				window.msRequestAnimationFrame		||
 				function( callback ){
-                    console.log(callback);
 					window.setTimeout(callback, 1000 / 60);
 				};
 	})();
