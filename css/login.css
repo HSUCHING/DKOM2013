@@ -394,6 +394,11 @@ body {
     width: 100%;
 }
 
+.slide{
+    background-color: #708090;
+    display: none;
+}
+
 #menuTop-bar{
     position: absolute;
     top: 0px;
