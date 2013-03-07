@@ -154,4 +154,10 @@ window.onload = function () {
 };
 
 
+//menutop
 
+$(".btn-slide").click(function () {
+    $("#menuToppanel").slideToggle("slow");
+    $(this).toggleClass("active");
+    return false;
+});

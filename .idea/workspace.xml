@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1439f7e-e578-4b05-bbc6-f9f71dcbe778" name="Default" comment="" />
+    <list default="true" id="a1439f7e-e578-4b05-bbc6-f9f71dcbe778" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/orange_arrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/login.css" afterPath="$PROJECT_DIR$/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
+    </list>
     <ignored path="DKOM2013.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,22 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="790" selection-end="790" vertical-scroll-proportion="0.34670487">
+            <state line="142" column="63" selection-start="4307" selection-end="4307" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forkit.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/forkit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="0" selection-start="4166" selection-end="4166" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -43,7 +38,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="8" selection-start="273" selection-end="273" vertical-scroll-proportion="-10.645162">
+            <state line="244" column="13" selection-start="9411" selection-end="9423" vertical-scroll-proportion="-3.7741935">
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -51,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="login.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="361" column="48" selection-start="8985" selection-end="8985" vertical-scroll-proportion="0.0">
+            <state line="377" column="19" selection-start="9361" selection-end="9361" vertical-scroll-proportion="0.21203439">
               <folding />
             </state>
           </provider>
@@ -83,19 +78,19 @@
         <option value="$PROJECT_DIR$/js/impress.js" />
         <option value="$PROJECT_DIR$/js/mapsimulate.js" />
         <option value="$PROJECT_DIR$/word.html" />
-        <option value="$PROJECT_DIR$/css/login.css" />
-        <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/js/forkit.js" />
         <option value="$PROJECT_DIR$/css/all.css" />
         <option value="$PROJECT_DIR$/DemoLogin.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/css/login.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="60" />
-    <option name="y" value="75" />
-    <option name="width" value="1598" />
+    <option name="x" value="581" />
+    <option name="y" value="537" />
+    <option name="width" value="1440" />
     <option name="height" value="898" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -202,9 +197,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\i068959\Documents\GitHub\DKOM2013\img" />
       <recent name="C:\Users\i068959\Documents\GitHub\DKOM2013\json" />
       <recent name="C:\Users\i068959\Documents\GitHub\DKOM2013\js" />
-      <recent name="C:\Users\i068959\Documents\GitHub\DKOM2013\img" />
       <recent name="C:\Users\i068959\Documents\GitHub\DKOM2013\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -250,13 +245,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="75" width="1598" height="898" extended-state="1" />
+    <frame x="581" y="537" width="1440" height="898" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18088518" sideWeight="0.99327356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2012848" sideWeight="0.99327356" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -328,12 +323,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/map.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0" />
+        <state line="23" column="1" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/magnetic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="209" selection-end="209" vertical-scroll-proportion="0.23517978" />
+        <state line="11" column="10" selection-start="209" selection-end="209" vertical-scroll-proportion="0.23517978">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://C:/Program Files/apache-tomcat-7.0.30/webapps/Demo/script.js">
@@ -406,22 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="361" column="48" selection-start="8985" selection-end="8985" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="8" selection-start="273" selection-end="273" vertical-scroll-proportion="-10.645162">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/forkit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="184" column="0" selection-start="4166" selection-end="4166" vertical-scroll-proportion="0.0">
@@ -431,9 +414,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="244" column="13" selection-start="9411" selection-end="9423" vertical-scroll-proportion="-3.7741935">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="790" selection-end="790" vertical-scroll-proportion="0.34670487">
+        <state line="142" column="63" selection-start="4307" selection-end="4307" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="377" column="19" selection-start="9361" selection-end="9361" vertical-scroll-proportion="0.21203439">
           <folding />
         </state>
       </provider>
