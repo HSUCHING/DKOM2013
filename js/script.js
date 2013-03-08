@@ -30,28 +30,17 @@ function calculateDistance(originPlace, destPlace) {
     var directionsService = new google.maps.DirectionsService();
 
 // DirectionsRequest
-    var requestdistance = {
-        origin:new google.maps.LatLng(originPlace.latitude, originPlace.longitude), // 起點
-        destination:new google.maps.LatLng(destPlace.latitude, destPlace.latitude), // 終點
-        waypoints:[],
-        optimizeWaypoints:true, // 路線最佳化
-        travelMode:google.maps.TravelMode.WALKING // 交通模式，目前有 開車/步行 以及腳踏車(僅限美國) 三種路線規劃
-    };
 
-    directionsService.route(requestdistance, function (response, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-            var route = response.routes[0];
-            // 取得距離
-            console.log(route.legs[0].distance.text);
-            // 取得從起點至終點的大約時間
-            console.log(route.legs[0].duration.text);
-        }
-    });
-
-//
-//    $.each(originPlace, function (oridx, oritem) {
-//        $.each(destPlace, function (deidx, deitem) {
-//            // DirectionsRequest
+    $.each(originPlace, function (oridx, oritem) {
+        $.each(destPlace, function (deidx, deitem) {
+            // DirectionsRequest
+            route=google.maps.geometry.spherical.computeDistanceBetween (new google.maps.LatLng(oritem.latitude, oritem.longitude), new google.maps.LatLng(deitem.latitude, deitem.longitude));
+            temdistance = {
+                        "locationId":deitem.locationId,
+                        "rentId":oritem.rentId,
+                        "distance":route
+            };
+            distance_allarray.push(temdistance);
 //            var requestdistance = {
 //                origin:new google.maps.LatLng(oritem.latitude, oritem.longitude), // 起點
 //                destination:new google.maps.LatLng(deitem.latitude, deitem.latitude), // 終點
@@ -69,13 +58,15 @@ function calculateDistance(originPlace, destPlace) {
 //                        "distance":route.legs[0].distance.text
 //                    };
 //                    distance_allarray.push(temdistance);
+//                    if (oridx == (originPlace.length - 1) && deidx == (destPlacePlace.length - 1)) {
+//                        console.log(distance_allarray);
+//                    }
 //                    // 取得從起點至終點的大約時間
 ////                    console.log(route.legs[0].duration.text);
 //                }
 //            });
-//        })
-//    });
-
+        })
+    });
     console.log(distance_allarray);
 }
 
@@ -102,7 +93,7 @@ $("#buttonContainer").click(function () {
                     rentData_array.push(templocData);
                 }
 
-                calculateDistance(rentData_array[0], locData_array[0]);
+                calculateDistance(rentData_array, locData_array);
 
                 console.log(locData_array);
                 loadopenlayers_map(locData_array);
