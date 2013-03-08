@@ -53,6 +53,10 @@ Magnetic = new(function() {
                 y: o
             }) < magnet.orbit * 0.5) {
                 magnet.dragging = true;
+
+//                Hsuching
+                console.log(magnet);
+                magnet.position.x +=20;
                 break
             }
         }
@@ -107,7 +111,7 @@ Magnetic = new(function() {
     }
     function C() {
         i = r ? window.innerWidth: 800;
-        j = r ? window.innerHeight: 800;
+        j = r ? window.innerHeight: 600;
         e.width = i;
         e.height = j;
         var a = (window.innerWidth - i) * 0.5,
@@ -287,15 +291,19 @@ Magnetic = new(function() {
             document.addEventListener("touchend", M, false);
             document.getElementById("keyboardLeft").addEventListener("click", N, false);
             document.getElementById("keyboardRight").addEventListener("click", O, false);
-//            for (var a = 0; a < 2; a++) z({
-//                x: (i - 300) * 0.5 + Math.random() * 300,
-//                y: (j - 300) * 0.5 + Math.random() * 300
-//            });
 
+//            for (var a = 0; a < 2; a++) {
+//                z({
+//                    x: (i - 300) * 0.5 + Math.random() * 300,
+//                    y: (j - 300) * 0.5 + Math.random() * 300
+//                });
+//            }
+//
 //            var tempz=z({x:390+10,y:380+10});
-
+//
 //            this.temppointarray.push(tempz);
             C();
+
             setInterval(P, 1E3 / 30)
         }
     }
@@ -318,7 +326,7 @@ function Particle() {
     this.magnet = null;
 }
 function Magnet() {
-    this.orbit = 100;
+    this.orbit = 50;
     this.position = {
         x: 0,
         y: 0

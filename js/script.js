@@ -22,6 +22,63 @@ function loadopenlayers_map(mappoint_array) {
 }
 
 
+function calculateDistance(originPlace, destPlace) {
+//    var directionsService = new google.maps.DirectionsService();
+    var distance_allarray = [];
+    var temdistance = {};
+    var route;
+    var directionsService = new google.maps.DirectionsService();
+
+// DirectionsRequest
+    var requestdistance = {
+        origin:new google.maps.LatLng(originPlace.latitude, originPlace.longitude), // 起點
+        destination:new google.maps.LatLng(destPlace.latitude, destPlace.latitude), // 終點
+        waypoints:[],
+        optimizeWaypoints:true, // 路線最佳化
+        travelMode:google.maps.TravelMode.WALKING // 交通模式，目前有 開車/步行 以及腳踏車(僅限美國) 三種路線規劃
+    };
+
+    directionsService.route(requestdistance, function (response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            var route = response.routes[0];
+            // 取得距離
+            console.log(route.legs[0].distance.text);
+            // 取得從起點至終點的大約時間
+            console.log(route.legs[0].duration.text);
+        }
+    });
+
+//
+//    $.each(originPlace, function (oridx, oritem) {
+//        $.each(destPlace, function (deidx, deitem) {
+//            // DirectionsRequest
+//            var requestdistance = {
+//                origin:new google.maps.LatLng(oritem.latitude, oritem.longitude), // 起點
+//                destination:new google.maps.LatLng(deitem.latitude, deitem.latitude), // 終點
+//                waypoints:[],
+//                optimizeWaypoints:true, // 路線最佳化
+//                travelMode:google.maps.TravelMode.WALKING // 交通模式，目前有 開車/步行 以及腳踏車(僅限美國) 三種路線規劃
+//            };
+//            directionsService.route(requestdistance, function (response, status) {
+//                if (status == google.maps.DirectionsStatus.OK) {
+//                    route = response.routes[0];
+//                    // 取得距離
+//                    temdistance = {
+//                        "locationId":deitem.locationId,
+//                        "rentId":oritem.locationId,
+//                        "distance":route.legs[0].distance.text
+//                    };
+//                    distance_allarray.push(temdistance);
+//                    // 取得從起點至終點的大約時間
+////                    console.log(route.legs[0].duration.text);
+//                }
+//            });
+//        })
+//    });
+
+    console.log(distance_allarray);
+}
+
 //ajax httprequest
 $("#buttonContainer").click(function () {
         $.ajax({
@@ -31,12 +88,22 @@ $("#buttonContainer").click(function () {
             success:function (jsonobj) {
                 var jsonobj_keys = Object.keys(jsonobj);
                 var jsonobjlocData = jsonobj[jsonobj_keys[1]];
+                var jsonobjrentData = jsonobj[jsonobj_keys[2]];
                 var jsonobjlocData_keys = Object.keys(jsonobjlocData);
+                var jsonobjrentData_keys = Object.keys(jsonobjrentData);
                 var locData_array = [];
+                var rentData_array = [];
                 for (var i = 0; i < jsonobjlocData_keys.length; i++) {
                     var templocData = jsonobjlocData[jsonobjlocData_keys[i]];
                     locData_array.push(templocData);
                 }
+                for (var i = 0; i < jsonobjrentData_keys.length; i++) {
+                    var templocData = jsonobjrentData[jsonobjrentData_keys[i]];
+                    rentData_array.push(templocData);
+                }
+
+                calculateDistance(rentData_array[0], locData_array[0]);
+
                 console.log(locData_array);
                 loadopenlayers_map(locData_array);
                 jumpsections = {"#photo":$('#photo').offset().top, "#contact":$('#contact').offset().top};
@@ -160,4 +227,10 @@ $(".btn-slide").click(function () {
     $("#menuToppanel").slideToggle("slow");
     $(this).toggleClass("active");
     return false;
+});
+
+
+$("#admininfo").click(function () {
+    $("#infocard").show();
+    $("#infocard").fadeIn("fast");
 });

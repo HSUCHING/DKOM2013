@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <meta charset="UTF-8">
 <head>
     <title>DKOM2013</title>
@@ -122,39 +122,37 @@
         </div>
     </div>
 
-    <button id="button">Click</button>
+    <!--<div class="dropdownlistNaviOne">-->
+        <!--<section class="clearfix">-->
+            <!--<div class="fleft">-->
+                <!--<select id="cd-dropdown" class="cd-select">-->
+                    <!--<option value="-1" selected>选择地区</option>-->
+                    <!--<option value="pudong" class="icon-google-plus">浦东新区</option>-->
+                    <!--<option value="jingan" class="icon-facebook">静安区</option>-->
+                    <!--<option value="changning" class="icon-twitter">长宁区</option>-->
+                    <!--<option value="huangpu" class="icon-github">黄浦区</option>-->
+                    <!--<option value="putuo" class="icon-github">普陀区</option>-->
+                <!--</select>-->
+            <!--</div>-->
+        <!--</section>-->
+    <!--</div>-->
 
-    <div class="dropdownlistNaviOne">
-        <section class="clearfix">
-            <div class="fleft">
-                <select id="cd-dropdown" class="cd-select">
-                    <option value="-1" selected>选择地区</option>
-                    <option value="pudong" class="icon-google-plus">浦东新区</option>
-                    <option value="jingan" class="icon-facebook">静安区</option>
-                    <option value="changning" class="icon-twitter">长宁区</option>
-                    <option value="huangpu" class="icon-github">黄浦区</option>
-                    <option value="putuo" class="icon-github">普陀区</option>
-                </select>
-            </div>
-        </section>
-    </div>
-
-    <!-- container -->
-    <div class="dropdownlistNaviTwo">
-        <dl class="maki">
-            <dt>热门商区</dt>
-            <dd><a value="lujiazui" href="#">陆家嘴</a></dd>
-            <dd><a value="babaiban" href="#">八佰伴</a></dd>
-            <dd><a value="centerpark" href="#">世纪公园</a></dd>
-            <dd><a value="jinbridge" href="#">金桥</a></dd>
-            <dd><a value="yuanshenggymcenter" href="#">源深体育中心</a></dd>
-            <dd><a value="zhangjiang" href="#">张江</a></dd>
-            <dd><a value="chuansha" href="#">川沙</a></dd>
-            <dd><a value="waigaoqiao" href="#">外高桥</a></dd>
-            <dd><a value="tangbridge" href="#">塘桥</a></dd>
-            <dd><a value="huinantown" href="#">惠南镇</a></dd>
-        </dl>
-    </div>
+    <!--&lt;!&ndash; container &ndash;&gt;-->
+    <!--<div class="dropdownlistNaviTwo">-->
+        <!--<dl class="maki">-->
+            <!--<dt>热门商区</dt>-->
+            <!--<dd><a value="lujiazui" href="#">陆家嘴</a></dd>-->
+            <!--<dd><a value="babaiban" href="#">八佰伴</a></dd>-->
+            <!--<dd><a value="centerpark" href="#">世纪公园</a></dd>-->
+            <!--<dd><a value="jinbridge" href="#">金桥</a></dd>-->
+            <!--<dd><a value="yuanshenggymcenter" href="#">源深体育中心</a></dd>-->
+            <!--<dd><a value="zhangjiang" href="#">张江</a></dd>-->
+            <!--<dd><a value="chuansha" href="#">川沙</a></dd>-->
+            <!--<dd><a value="waigaoqiao" href="#">外高桥</a></dd>-->
+            <!--<dd><a value="tangbridge" href="#">塘桥</a></dd>-->
+            <!--<dd><a value="huinantown" href="#">惠南镇</a></dd>-->
+        <!--</dl>-->
+    <!--</div>-->
     <div id="buttonContainer">
         <a href="#" class="redButton" id="push">Push</a>
     </div>
@@ -244,9 +242,36 @@
 <div id="menuTop-bar">
     <div id="menuToppanel">
         <!-- you can put content here -->
-
     </div>
-    <p class="slide"><a href="#" class="btn-slide">Menu</a></p>
+    <div class="slide">
+        <div class="btn-slide"></div>
+
+        <div id="admininfo"></div>
+    </div>
+
+
+    <div id="infocard">
+
+        <div class="inner">
+
+            <h4><a itemprop="name" href="http://etchapps.com">Etch</a></h4>
+
+            <p><i class="icon icon-envelope-alt"></i><a itemprop="email" href="mailto:info@sap.com">info@sap.com</a>
+            </p>
+
+            <p><i class="icon icon-phone"></i><span itemprop="telephone">+86 61085356</span></p>
+
+            <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <i class="icon icon-map-marker"></i>
+                <span itemprop="streetAddress">14 St John's Lane</span>,
+                <span itemprop="addressLocality">Canterbury</span>,
+                <span itemprop="addressRegion">Kent</span>,
+                <span itemprop="postalCode">CT1 2QG</span>,
+                <abbr itemprop="addressCountry" itemscope itemtype="http://schema.org/Country"
+                      title="United Kingdom">SH</abbr>
+            </p>
+        </div>
+    </div>
 </div>
 
 

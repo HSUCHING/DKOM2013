@@ -1,8 +1,8 @@
 canvas#world{
     background-color: #000000;
-    z-index:-1;
+    z-index:9999;
     border: 2px #000000 solid;
-    /*opacity: 0.5;*/
+    opacity: 0.5;
 }
 #panel{
     position: absolute;

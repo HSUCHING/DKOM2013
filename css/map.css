@@ -6,7 +6,7 @@
 }
 #mapdiv{
     width: 800px;
-    height: 800px;
+    height: 600px;
     border: 2px solid #000000;
 }
 #button{
@@ -15,10 +15,10 @@
 }
 
 #maparea{
-    opacity: 0.0;
+    /*opacity: 0.0;*/
 }
 
 #world{
-    opacity: 0.0;
+    /*opacity: 0.0;*/
     /*display: none;*/
 }
