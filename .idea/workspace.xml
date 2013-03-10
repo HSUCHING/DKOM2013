@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1439f7e-e578-4b05-bbc6-f9f71dcbe778" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/avgrund.js" afterPath="$PROJECT_DIR$/js/avgrund.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/impress.js" afterPath="$PROJECT_DIR$/js/impress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/dropdown.css" afterPath="$PROJECT_DIR$/css/dropdown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="DKOM2013.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,21 +23,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Index2.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Index2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="1053" selection-end="3431" vertical-scroll-proportion="-42.967743">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="impress.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="impress.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/impress.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="339" column="25" selection-start="10821" selection-end="10821" vertical-scroll-proportion="4.9967265">
+            <state line="147" column="11" selection-start="4450" selection-end="4450" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#3412#3475#0" expanded="false" />
                 <element signature="e#3593#3678#0" expanded="false" />
@@ -55,6 +43,26 @@
                 <element signature="e#5515#6568#0" expanded="false" />
                 <element signature="e#9804#9983#0" expanded="false" />
                 <element signature="e#10017#10193#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dropdown.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/dropdown.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="16" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.7446154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="222" column="61" selection-start="8425" selection-end="8425" vertical-scroll-proportion="-10.645162">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,19 +120,19 @@
         <option value="$PROJECT_DIR$/css/login.css" />
         <option value="$PROJECT_DIR$/css/all.css" />
         <option value="$PROJECT_DIR$/js/jquery.dropdown.js" />
-        <option value="$PROJECT_DIR$/css/dropdown.css" />
         <option value="$PROJECT_DIR$/css/makisu.css" />
         <option value="$PROJECT_DIR$/js/script.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/magnetic.js" />
         <option value="$PROJECT_DIR$/Index2.html" />
         <option value="$PROJECT_DIR$/js/impress.js" />
         <option value="$PROJECT_DIR$/js/avgrund.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/dropdown.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="294" />
+    <option name="x" value="190" />
     <option name="y" value="22" />
     <option name="width" value="1397" />
     <option name="height" value="798" />
@@ -218,6 +226,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DKOM2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DKOM2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DKOM2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DKOM2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sosa icon font" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -240,6 +288,7 @@
       <recent name="C:\Users\i068959\Documents\GitHub\DKOM2013\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css/fonts" />
       <recent name="C:\Users\i068959\Documents\GitHub\DKOM2013\img" />
       <recent name="C:\Users\i068959\Documents\GitHub\DKOM2013\js" />
     </key>
@@ -282,7 +331,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="294" y="22" width="1397" height="798" extended-state="0" />
+    <frame x="190" y="22" width="1397" height="798" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -404,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/dropdown.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="2" selection-start="4554" selection-end="4555" vertical-scroll-proportion="-8.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/makisu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
@@ -422,15 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="114" column="29" selection-start="4373" selection-end="4373" vertical-scroll-proportion="0.5855573">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="84" selection-start="3244" selection-end="3244" vertical-scroll-proportion="0.5241379">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -446,15 +479,6 @@
         <state line="133" column="22" selection-start="5376" selection-end="5378" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1362903178000" expanded="true" signature="5952:6069" placeholder="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="1053" selection-end="3431" vertical-scroll-proportion="-42.967743">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -475,9 +499,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="0" selection-start="1053" selection-end="3431" vertical-scroll-proportion="2.1980197">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="222" column="61" selection-start="8425" selection-end="8425" vertical-scroll-proportion="-10.645162">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/impress.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="339" column="25" selection-start="10821" selection-end="10821" vertical-scroll-proportion="4.9967265">
+        <state line="147" column="11" selection-start="4450" selection-end="4450" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#3412#3475#0" expanded="false" />
             <element signature="e#3593#3678#0" expanded="false" />
@@ -495,6 +537,13 @@
             <element signature="e#9804#9983#0" expanded="false" />
             <element signature="e#10017#10193#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/dropdown.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="16" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.7446154">
+          <folding />
         </state>
       </provider>
     </entry>
