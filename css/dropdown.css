@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot');
+    src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.svg#icomoon') format('svg'),
+    url('fonts/icomoon.woff') format('woff'),
+    url('fonts/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 .cd-dropdown span[class^="icon-"]:before,
 .cd-dropdown span[class*=" icon-"]:before {
     font-family: 'icomoon';
@@ -105,18 +117,10 @@
     content: "\3c";
 }
 
-
-
-
-
-
-
-
-
-
 .cd-dropdown,
 .cd-select {
     position: relative;
+    height: 60px;
     width: 300px;
     margin: 20px auto;
     display: block;
@@ -239,9 +243,11 @@ body {
 
 .dropdownlistNaviOne {
     width: 500px;
-    position: absolute;
-    top:50px;
-    right:-100px;
+    position: relative;
+    /*top:50px;*/
+    /*right:-100px;*/
+    margin-left: 40%;
+    top: 50px;
 }
 
 .dropdownlistNaviOne > header {
@@ -272,14 +278,6 @@ body {
     min-width: 300px;
 }
 
-/*.main p {*/
-    /*color: #AAA;*/
-    /*padding: 20px 30px 0px 0px;*/
-    /*font-size: 20px;*/
-    /*line-height: 34px;*/
-    /*font-weight: 300;*/
-    /*text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);*/
-/*}*/
 
 /* Header Style */
 .codrops-top {
@@ -339,24 +337,6 @@ body {
     color: #aaa;
     border-color: #aaa;
 }
-
-
-/*@media screen and (max-width: 730px){*/
-    /*.fleft {*/
-        /*width: 100%;*/
-        /*float: none;*/
-        /*text-align: center;*/
-    /*}*/
-/*}*/
-
-
-
-
-
-
-
-
-
 
 
 .cd-dropdown > span,

@@ -1,12 +1,12 @@
 canvas#world{
     background-color: #000000;
-    z-index:9999;
+    z-index:2000;
     border: 2px #000000 solid;
     opacity: 0.5;
 }
 #panel{
     position: absolute;
-    z-index:9999;
+    z-index:2000;
     border: 1px #000000 solid;
 }
 #seeMore {
@@ -15,7 +15,7 @@ canvas#world{
     color: #999999;
     width: 812px;
     text-align: right;
-    z-index:9999;
+    z-index:2000;
 }
 #seeMore a {
     font-family: Arial, Helvetica, sans-serif;

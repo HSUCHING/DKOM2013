@@ -1,9 +1,9 @@
 /* List styles */
 
 .dropdownlistNaviTwo{
-    position: absolute;
-    top:330px;
-    right:155px;
+    position: relative;
+    top:-10px;
+    margin-left: 0px;
     display: none;
 }
 
@@ -17,8 +17,8 @@
 
     text-transform: uppercase;
     position: absolute;
-    margin-left: -140px;
-    margin-top: -280px;
+    /*margin-left: -140px;*/
+    /*margin-top: -50px;*/
     top: 55%;
     text-align: center;
 }

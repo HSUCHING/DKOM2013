@@ -40,7 +40,7 @@ map.addControl(new OpenLayers.Control.LayerSwitcher());
 
 //    add marker layer
 
-function GetMark(lonlat, w, h, statusImg,idname) {
+function GetMark(lonlat, w, h, statusImg, idname) {
     var size = new OpenLayers.Size(w, h);
     var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
     var icon = new OpenLayers.Icon('img/drugstore.png', size, offset, idname);
@@ -58,26 +58,26 @@ function GetMark(lonlat, w, h, statusImg,idname) {
 //map.addLayer(vector);
 //console.log(start_point.distanceTo(end_point));
 //
-var directionsService = new google.maps.DirectionsService();
-
-// DirectionsRequest
-var requestdistance = {
-    origin: new google.maps.LatLng(25.058470, 121.554901),  // 起點
-    destination: new google.maps.LatLng(25.058059, 121.555489),  // 終點
-    waypoints: [],
-    optimizeWaypoints: true, // 路線最佳化
-    travelMode: google.maps.TravelMode.WALKING // 交通模式，目前有 開車/步行 以及腳踏車(僅限美國) 三種路線規劃
-};
-
-directionsService.route(requestdistance, function(response, status) {
-    if (status == google.maps.DirectionsStatus.OK) {
-        var route = response.routes[0];
-        // 取得距離
-        console.log(route.legs[0].distance.text);
-        // 取得從起點至終點的大約時間
-        console.log(route.legs[0].duration.text);
-    }
-});
+//var directionsService = new google.maps.DirectionsService();
+//
+//// DirectionsRequest
+//var requestdistance = {
+//    origin: new google.maps.LatLng(25.058470, 121.554901),  // 起點
+//    destination: new google.maps.LatLng(25.058059, 121.555489),  // 終點
+//    waypoints: [],
+//    optimizeWaypoints: true, // 路線最佳化
+//    travelMode: google.maps.TravelMode.WALKING // 交通模式，目前有 開車/步行 以及腳踏車(僅限美國) 三種路線規劃
+//};
+//
+//directionsService.route(requestdistance, function(response, status) {
+//    if (status == google.maps.DirectionsStatus.OK) {
+//        var route = response.routes[0];
+//        // 取得距離
+//        console.log(route.legs[0].distance.text);
+//        // 取得從起點至終點的大約時間
+//        console.log(route.legs[0].duration.text);
+//    }
+//});
 
 
 

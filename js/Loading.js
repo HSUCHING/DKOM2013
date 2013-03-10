@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 ;
-window.Modernizr = function (a, b, c) {
+window.Modernizrloading = function (a, b, c) {
     function y(a) {
         j.cssText = a
     }
@@ -54,7 +54,7 @@ window.Modernizr = function (a, b, c) {
         }("search tel url email datetime date month week time datetime-local number range color".split(" "))
     }
 
-    var d = "2.6.2", e = {}, f = !0, g = b.documentElement, h = "modernizr", i = b.createElement(h), j = i.style, k = b.createElement("input"), l = ":)", m = {}.toString, n = "Webkit Moz O ms", o = n.split(" "), p = n.toLowerCase().split(" "), q = {}, r = {}, s = {}, t = [], u = t.slice, v, w = {}.hasOwnProperty, x;
+    var d = "2.6.2", e = {}, f = !0, g = b.documentElement, h = "Modernizrloading", i = b.createElement(h), j = i.style, k = b.createElement("input"), l = ":)", m = {}.toString, n = "Webkit Moz O ms", o = n.split(" "), p = n.toLowerCase().split(" "), q = {}, r = {}, s = {}, t = [], u = t.slice, v, w = {}.hasOwnProperty, x;
     !A(w, "undefined") && !A(w.call, "undefined") ? x = function (a, b) {
         return w.call(a, b)
     } : x = function (a, b) {
@@ -266,11 +266,11 @@ window.Modernizr = function (a, b, c) {
         for (j in d)e.setAttribute(j, d[j]);
         g || (n.parentNode.insertBefore(e, n), m(c, 0))
     }
-}(this, document), Modernizr.load = function () {
+}(this, document), Modernizrloading.load = function () {
     yepnope.apply(window, [].slice.call(arguments, 0))
-}, Modernizr.addTest("pointerevents", function () {
+}, Modernizrloading.addTest("pointerevents", function () {
     var a = document.createElement("x"), b = document.documentElement, c = window.getComputedStyle, d;
     return"pointerEvents"in a.style ? (a.style.pointerEvents = "auto", a.style.pointerEvents = "x", b.appendChild(a), d = c && c(a, "").pointerEvents === "auto", b.removeChild(a), !!d) : !1
-}), Modernizr.addTest("placeholder", function () {
-    return"placeholder"in(Modernizr.input || document.createElement("input")) && "placeholder"in(Modernizr.textarea || document.createElement("textarea"))
+}), Modernizrloading.addTest("placeholder", function () {
+    return"placeholder"in(Modernizrloading.input || document.createElement("input")) && "placeholder"in(Modernizrloading.textarea || document.createElement("textarea"))
 });

@@ -5,11 +5,14 @@
  * Time: 1:23 PM
  * To change this template use File | Settings | File Templates.
  */
+
+
 Magnetic = new(function() {
     function z(a) {
         var b = new Magnet;
         b.position.x = a.x;
         b.position.y = a.y;
+        b.name= a.name;
         f.push(b);
         a = b.position;
         var temp_b=b;
@@ -56,7 +59,8 @@ Magnetic = new(function() {
 
 //                Hsuching
                 console.log(magnet);
-                magnet.position.x +=20;
+                openDialog();
+//                magnet.position.x +=20;
                 break
             }
         }
@@ -333,6 +337,7 @@ function Magnet() {
     };
     this.dragging = false;
     this.connections = 0;
-    this.size = 1
+    this.size = 1;
+    this.name="";
 }
 Magnetic.init();
