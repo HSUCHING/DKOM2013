@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a1439f7e-e578-4b05-bbc6-f9f71dcbe778" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dropdown.html" afterPath="$PROJECT_DIR$/Dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/dropdown.css" afterPath="$PROJECT_DIR$/css/dropdown.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/login.css" afterPath="$PROJECT_DIR$/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/magnetic.css" afterPath="$PROJECT_DIR$/css/magnetic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/makisu.css" afterPath="$PROJECT_DIR$/css/makisu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Loading.js" afterPath="$PROJECT_DIR$/js/Loading.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magnetic.js" afterPath="$PROJECT_DIR$/js/magnetic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mapsimulate.js" afterPath="$PROJECT_DIR$/js/mapsimulate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/demo.json" afterPath="$PROJECT_DIR$/json/demo.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/avgrund.js" afterPath="$PROJECT_DIR$/js/avgrund.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/impress.js" afterPath="$PROJECT_DIR$/js/impress.js" />
     </list>
     <ignored path="DKOM2013.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +24,46 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="magnetic.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Index2.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Index2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="0" selection-start="1053" selection-end="3431" vertical-scroll-proportion="-42.967743">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="impress.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/impress.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="339" column="25" selection-start="10821" selection-end="10821" vertical-scroll-proportion="4.9967265">
+              <folding>
+                <element signature="e#3412#3475#0" expanded="false" />
+                <element signature="e#3593#3678#0" expanded="false" />
+                <element signature="e#3684#3728#0" expanded="false" />
+                <element signature="e#3864#3946#0" expanded="false" />
+                <element signature="e#4139#4231#0" expanded="false" />
+                <element signature="e#4399#4448#0" expanded="false" />
+                <element signature="e#4550#4558#0" expanded="false" />
+                <element signature="e#4703#4773#0" expanded="false" />
+                <element signature="e#4797#4971#0" expanded="false" />
+                <element signature="e#5025#5119#0" expanded="false" />
+                <element signature="e#5181#5307#0" expanded="false" />
+                <element signature="e#5383#5462#0" expanded="false" />
+                <element signature="e#5515#6568#0" expanded="false" />
+                <element signature="e#9804#9983#0" expanded="false" />
+                <element signature="e#10017#10193#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="magnetic.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/magnetic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.28805238">
+            <state line="25" column="21" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -45,29 +72,9 @@
       <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="22" selection-start="5376" selection-end="5378" vertical-scroll-proportion="-7.8076925">
+            <state line="133" column="22" selection-start="5376" selection-end="5378" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1362903178000" expanded="true" signature="5952:6069" placeholder="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="impress.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/impress.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="14" selection-start="3695" selection-end="3695" vertical-scroll-proportion="-9.935484">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,19 +83,10 @@
       <file leaf-file-name="avgrund.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/avgrund.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="2868" selection-end="2931" vertical-scroll-proportion="0.0">
+            <state line="103" column="5" selection-start="2866" selection-end="2866" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mapsimulate.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/mapsimulate.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="29" selection-start="4373" selection-end="4373" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -106,8 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/json/demo.json" />
-        <option value="$PROJECT_DIR$/js/mapsimulate.js" />
         <option value="$PROJECT_DIR$/css/magnetic.css" />
         <option value="$PROJECT_DIR$/css/map.css" />
         <option value="$PROJECT_DIR$/index3.html" />
@@ -120,14 +116,16 @@
         <option value="$PROJECT_DIR$/css/makisu.css" />
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/avgrund.js" />
         <option value="$PROJECT_DIR$/js/magnetic.js" />
+        <option value="$PROJECT_DIR$/Index2.html" />
+        <option value="$PROJECT_DIR$/js/impress.js" />
+        <option value="$PROJECT_DIR$/js/avgrund.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="25" />
-    <option name="y" value="62" />
+    <option name="x" value="294" />
+    <option name="y" value="22" />
     <option name="width" value="1397" />
     <option name="height" value="798" />
   </component>
@@ -284,7 +282,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="25" y="62" width="1397" height="798" extended-state="0" />
+    <frame x="294" y="22" width="1397" height="798" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -360,22 +358,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DemoLogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/loading.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.0092306">
@@ -438,49 +420,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mapsimulate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="29" selection-start="4373" selection-end="4373" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/impress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="114" column="29" selection-start="4373" selection-end="4373" vertical-scroll-proportion="0.5855573">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="14" selection-start="3695" selection-end="3695" vertical-scroll-proportion="-9.935484">
+        <state line="74" column="84" selection-start="3244" selection-end="3244" vertical-scroll-proportion="0.5241379">
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Impressive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="22" selection-start="5376" selection-end="5378" vertical-scroll-proportion="-7.8076925">
+        <state line="133" column="22" selection-start="5376" selection-end="5378" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1362903178000" expanded="true" signature="5952:6069" placeholder="//..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/avgrund.js">
+    <entry file="file://$PROJECT_DIR$/Index2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="2868" selection-end="2931" vertical-scroll-proportion="0.0">
+        <state line="78" column="0" selection-start="1053" selection-end="3431" vertical-scroll-proportion="-42.967743">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/magnetic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.28805238">
+        <state line="25" column="21" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/avgrund.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="5" selection-start="2866" selection-end="2866" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/impress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="339" column="25" selection-start="10821" selection-end="10821" vertical-scroll-proportion="4.9967265">
+          <folding>
+            <element signature="e#3412#3475#0" expanded="false" />
+            <element signature="e#3593#3678#0" expanded="false" />
+            <element signature="e#3684#3728#0" expanded="false" />
+            <element signature="e#3864#3946#0" expanded="false" />
+            <element signature="e#4139#4231#0" expanded="false" />
+            <element signature="e#4399#4448#0" expanded="false" />
+            <element signature="e#4550#4558#0" expanded="false" />
+            <element signature="e#4703#4773#0" expanded="false" />
+            <element signature="e#4797#4971#0" expanded="false" />
+            <element signature="e#5025#5119#0" expanded="false" />
+            <element signature="e#5181#5307#0" expanded="false" />
+            <element signature="e#5383#5462#0" expanded="false" />
+            <element signature="e#5515#6568#0" expanded="false" />
+            <element signature="e#9804#9983#0" expanded="false" />
+            <element signature="e#10017#10193#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

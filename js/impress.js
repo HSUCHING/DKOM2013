@@ -274,7 +274,7 @@
                 },
                 scale: 1 / parseFloat(step.scale)
             };
-            
+
             // check if the transition is zooming in or not
             var zoomin = target.scale >= current.scale;
             
@@ -309,14 +309,18 @@
             
             return goto(prev);
         };
-        
+
         var next = function () {
             var next = steps.indexOf( active ) + 1;
             next = next < steps.length ? steps[ next ] : steps[ 0 ];
             
             return goto(next);
         };
-        
+
+        var goback=function(){
+            goto(steps[0]);
+        };
+
         window.addEventListener("hashchange", function () {
             goto( getElementFromUrl() );
         }, false);
@@ -332,7 +336,8 @@
         return (roots[ "impress-root-" + rootId ] = {
             goto: goto,
             next: next,
-            prev: prev
+            prev: prev,
+            goback:goback
         });
 
     }
@@ -425,10 +430,11 @@
 })(document, window);
 
 //impress
+var impressLayer;
 $(function () {
 
     var imp = impress();
-
+    impressLayer=imp;
     $('#arrowLeft').click(function (e) {
         imp.prev();
         e.preventDefault();
