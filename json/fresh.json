@@ -1,0 +1,46 @@
+{
+    "storeData":{
+        "101":{
+            "storeId":101,
+            "rentId":101,
+            "description":"Competitor 1",
+            "timeDepInfoMap":{
+                "2013":{
+                    "year":2013,
+                    "competitor":true,
+                    "revenue":0,
+                    "operationCost":0,
+                    "commodityCost":0,
+                    "onetimeCost":0,
+                    "suppliers":10,
+                    "cosmeceuticals":20,
+                    "otc":30,
+                    "rx":40,
+                    "medicare":true,
+                    "numOfSales":5
+                }
+            }
+        },
+        "102":{
+            "storeId":102,
+            "rentId":102,
+            "description":"Competitor 2",
+            "timeDepInfoMap":{
+                "2013":{
+                    "year":2013,
+                    "competitor":true,
+                    "revenue":0,
+                    "operationCost":0,
+                    "commodityCost":0,
+                    "onetimeCost":0,
+                    "suppliers":40,
+                    "cosmeceuticals":30,
+                    "otc":20,
+                    "rx":10,
+                    "medicare":false,
+                    "numOfSales":6
+                }
+            }
+        }
+    }
+}

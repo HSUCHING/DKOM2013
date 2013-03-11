@@ -16,15 +16,15 @@ function loadopenlayers_map(mappoint_array) {
 //    markers.addMarkers(mappoint);
     map.addLayer(markers);
     $.each(mappoint, function (idx, item) {
-        Magnetic.temppointarray.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10,name:'jk'}));
+        Magnetic.temppointarray.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10, name:'jk'}));
     });
     console.log(Magnetic.temppointarray);
 }
 
-
+var distance_allarray = [];
 function calculateDistance(originPlace, destPlace) {
 //    var directionsService = new google.maps.DirectionsService();
-    var distance_allarray = [];
+    distance_allarray = [];
 //    var temdistance = {};
 //    var route;
 
@@ -49,14 +49,15 @@ function calculateDistance(originPlace, destPlace) {
             destinations:destinations,
             travelMode:google.maps.TravelMode.WALKING,
             avoidHighways:false,
-            avoidTolls:false
+            avoidTolls:false,
+            unitSystem:google.maps.UnitSystem.METRIC
         }, function (response, status) {
             $.each(originPlace, function (oridx, oritem) {
                 $.each(destPlace, function (deidx, deitem) {
                     var temdistance = {
                         "locationId":deitem.locationId,
                         "rentId":oritem.rentId,
-                        "distance":response.rows[oridx].elements[deidx].distance.text
+                        "distance":response.rows[oridx].elements[deidx].distance.value
                     };
                     distance_allarray.push(temdistance);
                 });
@@ -248,16 +249,75 @@ $(".btn-slide").click(function () {
 
 tempclick = 70;
 $("#admininfo").click(function () {
-    if (tempclick == 55) {
-        $("#infocard").animate({top:tempclick}, {
-            duration:800
-        });
-    }
-    $("#infocard").fadeToggle(1000, 'linear');
-    if (tempclick == 70) {
-        $("#infocard").animate({top:tempclick}, {
-            duration:800
-        });
-    }
-    (tempclick == 70) ? (tempclick = 55) : (tempclick = 70);
+    $.ajax({
+        url:'../DKOM2013/json/animate.json',
+        type:'post',
+        dataType:'json',
+        success:function (jsonobjanalysis) {
+            var storeRevenues = [];
+            var jsonobjay_keys = Object.keys(jsonobjanalysis);
+            for (var i = 0; i < jsonobjay_keys.length; i++) {
+                var storeReData = {};
+                var jsonobjayData = jsonobjanalysis[jsonobjay_keys[i]];
+                storeReData.storeId = jsonobjayData.storeId;
+                var jsonobjay_keys_ykeys = Object.keys(jsonobjayData.timeDepInfoMap);
+                storeReData.revenue = 0;
+                for (var j = 0; j < jsonobjay_keys_ykeys.length; j++) {
+                    storeReData.revenue += jsonobjayData.timeDepInfoMap[jsonobjay_keys_ykeys[j]].revenue;
+                }
+                storeReData.revenue = storeReData.revenue / jsonobjay_keys_ykeys.length;
+                storeRevenues.push(storeReData);
+            }
+
+            $.ajax({
+                url:'../DKOM2013/json/fresh.json',
+                type:'post',
+                dataType:'json',
+                success:function (jsonobjanalysisstore) {
+                    var storeLocationDistances = [];
+                    var jsonobjaystore_keys = Object.keys(jsonobjanalysisstore["storeData"]);
+                    for (var i = 0; i < jsonobjaystore_keys.length; i++) {
+                        var storeloData = {};
+                        var jsonobjaystoreData = jsonobjanalysisstore["storeData"][jsonobjaystore_keys[i]];
+                        $.each(distance_allarray, function (idx, item) {
+                            if (jsonobjaystoreData.rentId == item.rentId) {
+                                storeloData.storeId = jsonobjaystoreData.storeId;
+                                storeloData.locationId = item.locationId;
+                                storeloData.distance = item.distance;
+                                storeLocationDistances.push(storeloData);
+                            }
+                        });
+                    }
+                    console.log(storeLocationDistances);
+                    generateLocationStoreWeights(storeLocationDistances,storeRevenues);
+                }
+            });
+
+
+            console.log(storeRevenues);
+        }
+    });
+
+
+//    if (tempclick == 55) {
+//        $("#infocard").animate({top:tempclick}, {
+//            duration:800
+//        });
+//    }
+//    $("#infocard").fadeToggle(1000, 'linear');
+//    if (tempclick == 70) {
+//        $("#infocard").animate({top:tempclick}, {
+//            duration:800
+//        });
+//    }
+//    (tempclick == 70) ? (tempclick = 55) : (tempclick = 70);
 });
+
+
+
+
+
+
+
+
+
