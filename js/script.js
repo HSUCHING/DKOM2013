@@ -8,7 +8,13 @@ function loadopenlayers_map(mappoint_array) {
 
     $.each(mappoint_array, function (idx, item) {
         lonlat_v = new OpenLayers.LonLat(item.longitude, item.latitude).transform('EPSG:4326', map.getProjectionObject());
-        marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png', "drugstore_" + idx);
+        if ($.inArray("locationId", Object.keys(item)) > 0) {
+            marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png', "location_" + idx);
+        } else if ($.inArray("storeId", Object.keys(item)) > 0) {
+            marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png', "drugstore_" + idx);
+        } else {
+            marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png', "rent_" + idx);
+        }
         markers.addMarker(marker);
         mappoint.push(marker);
     });
@@ -16,7 +22,14 @@ function loadopenlayers_map(mappoint_array) {
 //    markers.addMarkers(mappoint);
     map.addLayer(markers);
     $.each(mappoint, function (idx, item) {
-        Magnetic.temppointarray.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10, name:'jk'}));
+        var mappoint = mappoint_array[idx];
+        var magnetic_obj={};
+        magnetic_obj.id = mappoint.locationId;
+        magnetic_obj.array = [];
+        for (var i = 0; i < mappoint.timeDepInfoMap[Object.keys(mappoint.timeDepInfoMap)[0]].scale; i++) {
+            magnetic_obj.array.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10 + i * 3, y:$("#" + item.icon.id).position().top + 10 + i * 3, name:'location' + mappoint.locationId}));
+        }
+        Magnetic.temppointarray.push(magnetic_obj);
     });
     console.log(Magnetic.temppointarray);
 }
@@ -249,6 +262,24 @@ $(".btn-slide").click(function () {
 
 tempclick = 70;
 $("#admininfo").click(function () {
+
+    animatemagnetic();
+//    if (tempclick == 55) {
+//        $("#infocard").animate({top:tempclick}, {
+//            duration:800
+//        });
+//    }
+//    $("#infocard").fadeToggle(1000, 'linear');
+//    if (tempclick == 70) {
+//        $("#infocard").animate({top:tempclick}, {
+//            duration:800
+//        });
+//    }
+//    (tempclick == 70) ? (tempclick = 55) : (tempclick = 70);
+});
+
+
+function animatemagnetic() {
     $.ajax({
         url:'../DKOM2013/json/animate.json',
         type:'post',
@@ -277,10 +308,10 @@ $("#admininfo").click(function () {
                     var storeLocationDistances = [];
                     var jsonobjaystore_keys = Object.keys(jsonobjanalysisstore["storeData"]);
                     for (var i = 0; i < jsonobjaystore_keys.length; i++) {
-                        var storeloData = {};
                         var jsonobjaystoreData = jsonobjanalysisstore["storeData"][jsonobjaystore_keys[i]];
                         $.each(distance_allarray, function (idx, item) {
                             if (jsonobjaystoreData.rentId == item.rentId) {
+                                var storeloData = {};
                                 storeloData.storeId = jsonobjaystoreData.storeId;
                                 storeloData.locationId = item.locationId;
                                 storeloData.distance = item.distance;
@@ -289,7 +320,7 @@ $("#admininfo").click(function () {
                         });
                     }
                     console.log(storeLocationDistances);
-                    generateLocationStoreWeights(storeLocationDistances,storeRevenues);
+                    generateLocationStoreWeights(storeLocationDistances, storeRevenues);
                 }
             });
 
@@ -297,24 +328,7 @@ $("#admininfo").click(function () {
             console.log(storeRevenues);
         }
     });
-
-
-//    if (tempclick == 55) {
-//        $("#infocard").animate({top:tempclick}, {
-//            duration:800
-//        });
-//    }
-//    $("#infocard").fadeToggle(1000, 'linear');
-//    if (tempclick == 70) {
-//        $("#infocard").animate({top:tempclick}, {
-//            duration:800
-//        });
-//    }
-//    (tempclick == 70) ? (tempclick = 55) : (tempclick = 70);
-});
-
-
-
+}
 
 
 
