@@ -33,7 +33,7 @@ Magnetic = new(function() {
 //        n = a.clientX  - (window.innerWidth - i) * 0.5;
 //        o = a.clientY  - (window.innerHeight - j) * 0.5
         n = a.clientX  - 100;
-        o = a.clientY  - 50;
+        o = a.clientY  - 100;
     }
     function H(a) {
         a.preventDefault();
@@ -59,7 +59,7 @@ Magnetic = new(function() {
 
 //                Hsuching
                 console.log(magnet);
-                openDialog();
+//                openDialog();
 //                magnet.position.x +=20;
                 break
             }
@@ -124,14 +124,14 @@ Magnetic = new(function() {
 //        e.style.left = a-100 + "px";
 //        e.style.top = b + "px";
         e.style.left="100px";
-        e.style.top = "50px";
+        e.style.top = "100px";
 
 //        add by Hsuching
         document.getElementById("mapdiv").style.position="absolute";
 //        document.getElementById("mapdiv").style.left=a-100 + "px";
 //        document.getElementById("mapdiv").style.top=b + "px";
         document.getElementById("mapdiv").style.left="100px";
-        document.getElementById("mapdiv").style.top="50px";
+        document.getElementById("mapdiv").style.top="100px";
 
         t.style.position = "absolute";
         t.style.left = a + "px";
@@ -215,7 +215,7 @@ Magnetic = new(function() {
     }
     var r = navigator.userAgent.toLowerCase().indexOf("android") != -1 || navigator.userAgent.toLowerCase().indexOf("iphone") != -1 || navigator.userAgent.toLowerCase().indexOf("ipad") != -1,
         i = r ? window.innerWidth: 800,
-        j = r ? window.innerHeight: 800,
+        j = r ? window.innerHeight: 600,
         F = 20,
         p = 300,
         e,
