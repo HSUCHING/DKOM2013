@@ -65,9 +65,17 @@ jQuery.fn.timelinr = function (options) {
             var defaultPositionDates = parseInt($(settings.datesDiv).css('marginTop').substring(0, $(settings.datesDiv).css('marginTop').indexOf('px')));
         }
 
-        $(settings.datesDiv + ' a').click(function (event) {
+        var initialtime=0;
 
-            alert($(this).text());
+        $(settings.datesDiv + ' a').click(function (event) {
+            if(initialtime==0){
+                initialtime=1;
+            }else{
+                map.clearMarkers();
+                initialData(initialtime);
+            }
+
+
 
             event.preventDefault();
             // first vars

@@ -296,6 +296,7 @@ Magnetic = new(function() {
     this.temppointarray={};
     this.temppointarray.rental=[];
     this.temppointarray.location=[];
+    this.temppointarray.store=[];
     this.init = function() {
         e = document.getElementById("world");
         t = document.getElementById("seeMore");

@@ -49,8 +49,7 @@ a.redButton:active{
     position: absolute;
     top:50px;
     right: 100px;
-    /*display: none;*/
-
+    display: none;
 }
 
 .pointPointArrow{

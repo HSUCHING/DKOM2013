@@ -11,7 +11,7 @@ function loadopenlayers_map(mappoint_array) {
         if ($.inArray("locationId", Object.keys(item)) >= 0) {
             marker = GetMark(lonlat_v, 20, 20, 'img/people.png', "location_" + idx);
         } else if ($.inArray("storeId", Object.keys(item)) >= 0) {
-            marker = GetMark(lonlat_v, 20, 20, 'img/drugstore.png', "drugstore_" + idx);
+            marker = GetMark(lonlat_v, 20, 20, 'img/drugstore.png', "store_" + idx);
         } else {
             marker = GetMark(lonlat_v, 20, 20, 'img/drugstore.png', "rent_" + idx);
         }
@@ -19,7 +19,6 @@ function loadopenlayers_map(mappoint_array) {
         mappoint.push(marker);
     });
 
-//    markers.addMarkers(mappoint);
     map.addLayer(markers);
     if ($.inArray("locationId", Object.keys(mappoint_array[0])) >= 0) {
 
@@ -41,8 +40,19 @@ function loadopenlayers_map(mappoint_array) {
             var magnetic_obj = {};
             magnetic_obj.id = m_point.rentId;
             magnetic_obj.array = [];
-            magnetic_obj.array.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10, name:'rental' + m_point.locationId}));
+            magnetic_obj.array.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10, name:'rental' + m_point.rentId}));
             Magnetic.temppointarray.rental.push(magnetic_obj);
+        });
+    }
+
+    if ($.inArray("storeId", Object.keys(mappoint_array[0])) >= 0) {
+        $.each(mappoint, function (idx, item) {
+            var m_point = mappoint_array[idx];
+            var magnetic_obj = {};
+            magnetic_obj.id = m_point.storeId;
+            magnetic_obj.array = [];
+            magnetic_obj.array.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10, name:'store' + m_point.storeId}));
+            Magnetic.temppointarray.store.push(magnetic_obj);
         });
     }
 
@@ -89,7 +99,17 @@ function calculateDistance(originPlace, destPlace) {
                     distance_allarray.push(temdistance);
                 });
             });
-            console.log(distance_allarray);
+
+//            $.ajax({
+//                url:'../DKOM2013/json/demo.json',
+//                type:'post',
+//                dataType:'json',
+//                data:distance_allarray,
+//                success:function(){
+//
+//                }
+//            });
+//            console.log(distance_allarray);
         });
 
 
@@ -133,49 +153,68 @@ function calculateDistance(originPlace, destPlace) {
     console.log(distance_allarray);
 }
 
+transferobj = {};
+
+function initialData(year) {
+    $.ajax({
+        url:'../DKOM2013/json/demo.json',
+        type:'post',
+        dataType:'json',
+        success:function (jsonobj) {
+            transferobj.initialobj = {};
+            transferobj.initialobj = jsonobj;
+            var jsonobj_keys = Object.keys(jsonobj);
+            var jsonobjlocData = jsonobj[jsonobj_keys[1]];
+            var jsonobjrentData = jsonobj[jsonobj_keys[2]];
+            var jsonobjstoreData = jsonobj[jsonobj_keys[3]];
+            var jsonobjlocData_keys = Object.keys(jsonobjlocData);
+            var jsonobjrentData_keys = Object.keys(jsonobjrentData);
+            var jsonobjstoreData_keys = Object.keys(jsonobjstoreData);
+            var locData_array = [];
+            var rentData_array = [];
+            var storeData_array = [];
+            for (var i = 0; i < jsonobjlocData_keys.length; i++) {
+                var templocData = jsonobjlocData[jsonobjlocData_keys[i]];
+                locData_array.push(templocData);
+            }
+            for (var i = 0; i < jsonobjrentData_keys.length; i++) {
+                var temprentData = jsonobjrentData[jsonobjrentData_keys[i]];
+                for (var i = 0; i < jsonobjstoreData_keys.length; i++) {
+                    var tempstoreData = jsonobjstoreData[jsonobjstoreData_keys[i]];
+                    if (tempstoreData.rentId == temprentData.rentId) {
+                        tempstoreData.latitude = temprentData.latitude;
+                        tempstoreData.longitude = temprentData.longitude;
+                        storeData_array.push(tempstoreData);
+                    }
+                }
+                rentData_array.push(temprentData);
+            }
+
+            calculateDistance(rentData_array, locData_array);
+
+            loadopenlayers_map(locData_array);
+            loadopenlayers_map(rentData_array);
+            loadopenlayers_map(storeData_array);
+            jumpsections = {"#photo":$('#photo').offset().top, "#contact":$('#contact').offset().top};
+            $(".loadingcontainer").hide();
+        },
+        error:function () {
+            alert("error");
+            $(".loadingcontainer").hide();
+        },
+        beforeSend:function () {
+            $('#world').css({"z-index":2000});
+            $('#world').animate({"opacity":1.0}, 500, 'swing');
+            $(".loadingcontainer").show();
+        }
+    });
+}
+
+
 //ajax httprequest
 $("#buttonContainer").click(function () {
-        $.ajax({
-            url:'../DKOM2013/json/demo.json',
-            type:'post',
-            dataType:'json',
-            success:function (jsonobj) {
-                var jsonobj_keys = Object.keys(jsonobj);
-                var jsonobjlocData = jsonobj[jsonobj_keys[1]];
-                var jsonobjrentData = jsonobj[jsonobj_keys[2]];
-                var jsonobjlocData_keys = Object.keys(jsonobjlocData);
-                var jsonobjrentData_keys = Object.keys(jsonobjrentData);
-                var locData_array = [];
-                var rentData_array = [];
-                for (var i = 0; i < jsonobjlocData_keys.length; i++) {
-                    var templocData = jsonobjlocData[jsonobjlocData_keys[i]];
-                    locData_array.push(templocData);
-                }
-                for (var i = 0; i < jsonobjrentData_keys.length; i++) {
-                    var templocData = jsonobjrentData[jsonobjrentData_keys[i]];
-                    rentData_array.push(templocData);
-                }
-
-                calculateDistance(rentData_array, locData_array);
-
-                console.log(locData_array);
-                loadopenlayers_map(locData_array);
-                loadopenlayers_map(rentData_array);
-                jumpsections = {"#photo":$('#photo').offset().top, "#contact":$('#contact').offset().top};
-                $(".loadingcontainer").hide();
-            },
-            error:function () {
-                alert("error");
-                $(".loadingcontainer").hide();
-            },
-            beforeSend:function () {
-                $('#world').css({"z-index":2000});
-                $('#world').animate({"opacity":1.0}, 500, 'swing');
-                $(".loadingcontainer").show();
-            }
-        });
-    }
-);
+    initialData("2013");
+});
 
 
 //makisu
@@ -238,6 +277,7 @@ window.onload = function () {
     $('.dropdownlistNaviTwo dd').click(
         function () {
             console.log($(this).children()[0].attributes.item().value);
+            $(".btn-slide").trigger("click");
             $('.dropdownlistNaviTwo').fadeOut(2000, 'swing', function () {
                 $('.cd-dropdown').animate({
                     opacity:1.0,
@@ -300,6 +340,8 @@ function animatemagnetic() {
         type:'post',
         dataType:'json',
         success:function (jsonobjanalysis) {
+            transferobj.animateobj = {};
+            transferobj.animateobj = jsonobjanalysis;
             var storeRevenues = [];
             var jsonobjay_keys = Object.keys(jsonobjanalysis);
             for (var i = 0; i < jsonobjay_keys.length; i++) {
@@ -342,33 +384,28 @@ function animatemagnetic() {
                                 $.each(aditem.storeWeights, function (asdidx, asditem) {
                                     $.each(Magnetic.temppointarray.rental, function (mtridx, mtritem) {
                                         if (asditem.storeId == mtritem.id) {
-                                            var x_position=mtlitem.array[asdidx].position.x;
-                                            var y_position=mtlitem.array[asdidx].position.y;
-                                            var i=0;
-                                            var time_animate=setInterval(function(){
-                                                mtlitem.array[asdidx].position.x +=(mtritem.array[0].position.x-x_position)/1000;
-                                                mtlitem.array[asdidx].position.y +=(mtritem.array[0].position.y-y_position)/1000;
+                                            var x_position = mtlitem.array[asdidx].position.x;
+                                            var y_position = mtlitem.array[asdidx].position.y;
+                                            var i = 0;
+                                            var time_animate = setInterval(function () {
+                                                mtlitem.array[asdidx].position.x += (mtritem.array[0].position.x - x_position) / 1000;
+                                                mtlitem.array[asdidx].position.y += (mtritem.array[0].position.y - y_position) / 1000;
                                                 i++;
-                                                if(i==1000){
+                                                if (i == 1000) {
                                                     clearInterval(time_animate);
                                                 }
-                                            },50);
+                                            }, 50);
 
 //                                            mtlitem.array[asdidx].position.x = mtritem.array[0].position.x;
 //                                            mtlitem.array[asdidx].position.y = mtritem.array[0].position.y;
                                         }
                                     });
                                 });
-//                                Magnetic.temppointarray.rental
                             }
                         });
                     });
-
-
                 }
             });
-
-
             console.log(storeRevenues);
         }
     });

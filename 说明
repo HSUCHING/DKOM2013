@@ -1,0 +1,9 @@
+store，人群，rent，图标
+
+无法删除模拟点：magnetic.oriant=0;
+
+时间只能调节地图坐标。。选定时间后弄点
+
+
+注释
+if (a.magnet == null || a.magnet != l) a.magnet = l;
