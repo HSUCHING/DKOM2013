@@ -43,7 +43,7 @@ map.addControl(new OpenLayers.Control.LayerSwitcher());
 function GetMark(lonlat, w, h, statusImg, idname) {
     var size = new OpenLayers.Size(w, h);
     var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
-    var icon = new OpenLayers.Icon('img/drugstore.png', size, offset, idname);
+    var icon = new OpenLayers.Icon(statusImg, size, offset, idname);
     return new OpenLayers.Marker(lonlat, icon);
 }
 

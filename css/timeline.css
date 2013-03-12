@@ -1,0 +1,36 @@
+#timeline {
+    position: absolute;
+    top:500px;
+    left: 1000px;
+    width: 500px;
+    height: 60px;
+    overflow: hidden;
+    background: url('../img/dark_wood.png') repeat;
+    -webkit-box-shadow:2px 2px 5px grey;
+}
+
+#dates {
+    width: 800px;
+    height: 60px;
+    background: url("../img/dot.gif") center 45px repeat-x;
+    overflow: hidden;
+}
+
+#dates li {
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    background: url('../img/biggerdot.png') center bottom no-repeat;
+}
+
+#dates a {
+    line-height: 38px;
+    padding-bottom: 10px;
+}
+
+#dates .selected {
+    font-size: 38px;
+}

@@ -35,46 +35,143 @@
 
 <aside id="default-popup" class="avgrund-popup">
     <div id="impress" class="impress-not-supported">
+        <div id="comparison" class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="190">
 
-        <div id="intro" class="step" data-x="0" data-y="0">
-            <h2>Introducing Galaxy Nexus</h2>
+            <div id="info" style="clear:both; height: 150px; ">
+                <h2>Drug Store information:</h2>
 
-            <p>Android 4.0<br/> Super Amoled 720p Screen<br/> 1.2 GHz Dual Core CPU<br/> 32 GB of storage<br/> Fast
-                Camera</p>
-            <img src="img/nexus_1.jpg" width="232" height="458" alt="Galaxy Nexus"/>
+                <p>Name: <input id="drug_name"/><span id="j_drugname"></span>
+                    <br/>Rental Price:<span id="j_price"></span> 0,000 RMB/year
+                    <br/>
+                    <img id="compCheck" src="img/unchecked.png" style="visibility: hidden">
+                    <input type="checkbox" value="true"/> Competitor</img>
+                    <img id="check_med" src="img/unchecked.png" style="visibility: hidden">
+                    <input id="medCheck" type="checkbox" value="true"/>Medicare</img> </p>
+
+            </div>
+
+            <div id="adiv" style="clear:both; height: 100px; width: auto; "><p>Advantage:<br/><br/>
+                <img id="a_1" title="Big rental area" style="visibility:hidden" src="img/icons/1_area.png"/>
+                <img id="a_3" title="Near hospital" style="visibility:hidden" src="img/icons/1_hospital.png"/>
+                <img id="a_4" title="Near shopping mall" style="visibility:hidden" src="img/icons/1_malls.png"/>
+                <img id="a_5" title="Near metro" style="visibility:hidden" src="img/icons/1_metro.png"/>
+                <img id="a_6" title="Low rental price" style="visibility:hidden" src="img/icons/0_price.png"/>
+                <img id="a_7" title="Near residental sites" style="visibility:hidden" src="img/icons/1_residents.png"/>
+            </p>
+            </div>
+            <div id="bdiv" style="clear: both; hegith: 100px; width: auto; "><p>Disadvantage:
+                <br/><br/>
+                <img id="b_1" title="Small rental area" style="visibility:hidden" src="img/icons/0_area.png"/>
+                <img id="b_4" title="Far from shopping mall" style="visibility:hidden" src="img/icons/0_mall.png"/>
+                <img id="b_5" title="Far from metro" style="visibility:hidden" src="img/icons/0_metro.png"/>
+                <img id="b_7" title="Far from residental sites" style="visibility:hidden"
+                     src="img/icons/0_residents.png"/>
+            </p>
+            </div>
+
+            <!--<div id="info" style="clear:both; height: 150px; ">-->
+            <!--<h2>Drug Store information:</h2>-->
+
+            <!--<p>Name: <span id="j_drugname"></span>-->
+            <!--<br/>Rental Price:<span id="j_price"></span> 0,000 RMB/year-->
+            <!--<br/>-->
+            <!--<img id="check_comp" src="img/unchecked.png">Competitor</img>-->
+            <!--<img id="check_med" src="img/unchecked.png">Medicare</img> </p>-->
+
+            <!--</div>-->
+
+            <!--<div id="adiv" style="clear:both; height: 100px; width: auto; "><p>Advantage:<br/><br/>-->
+            <!--<img id="a_1" title="Big rental area" style="display: none;" src="img/icons/1_area.png"/>-->
+            <!--<img id="a_3" title="Near hospital" style="display: none;" src="img/icons/1_hospital.png"/>-->
+            <!--<img id="a_4" title="Near shopping mall" style="display: none;" src="img/icons/1_malls.png"/>-->
+            <!--<img id="a_5" title="Near metro" style="display: none;" src="img/icons/1_metro.png"/>-->
+            <!--<img id="a_6" title="Low rental price" style="display: none;" src="img/icons/0_price.png"/>-->
+            <!--<img id="a_7" title="Near residental sites" style="display: none;" src="img/icons/1_residents.png"/>-->
+            <!--</p>-->
+            <!--</div>-->
+            <!--<div id="bdiv" style="clear: both; hegith: 100px; width: auto; "><p>Disadvantage: <br/><br/>-->
+            <!--<img id="b_1" title="Small rental area" style="display: none;" src="img/icons/0_area.png"/>-->
+            <!--<img id="b_4" title="Far from shopping mall" style="display: none;" src="img/icons/0_mall.png"/>-->
+            <!--<img id="b_5" title="Far from metro" style="display: none;" src="img/icons/0_metro.png"/>-->
+            <!--<img id="b_7" title="Far from residental sites" style="display: none;"-->
+            <!--src="img/icons/0_residents.png"/>-->
+            <!--</p>-->
+            <!--</div>-->
+
+
         </div>
 
-        <div id="simplicity" class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="190">
-            <h2>Simplicity in Android 4.0</h2>
 
-            <p>Android 4.0, Ice Cream Sandwich brings an entirely new look and feel to Android. Simple layouts with
-                subtle animations and delightful flourishes make everything feel alive. </p>
-            <img src="img/nexus_2.jpg" width="289" height="535" alt="Galaxy Nexus"/>
+        <div id="pie" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">
+            <h2>Goods Distribution</h2>
+
+            <div id="chart1" style="width: 600px; height: 400px; background-color: #ffffff"></div>
+            <button id="b_submit" onclick="submint()">Submit</button>
+            <table id="chartData">
+
+                <tr>
+                    <th>Goods</th>
+                    <th>Percentage (%)</th>
+                </tr>
+
+                <tr style="color: #0DA068">
+                    <td>OTC</td>
+                    <td><input id="i_otc" value="25"
+                               onkeyup="value=value.replace(/[^\d]/g,'')"
+                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
+                    </td>
+                </tr>
+
+                <tr style="color: #194E9C">
+                    <td>RX Drug</td>
+                    <td><input id="i_rx" value="25"
+                               onkeyup="value=value.replace(/[^\d]/g,'') "
+                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
+                    </td>
+                </tr>
+
+                <tr style="color: #F88E5D">
+                    <td>Commodity</td>
+                    <td><input id="i_supplier" value="25"
+                               onkeyup="value=value.replace(/[^\d]/g,'') "
+                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
+                    </td>
+                </tr>
+
+                <tr style="color: #ED5713">
+                    <td>Cosmeceuticals</td>
+                    <td><input id="i_cos" value="25"
+                               onkeyup="value=value.replace(/[^\d]/g,'') "
+                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
+                    </td>
+                </tr>
+                <tr style="color: #5F91DC">
+                    <td>Sales</td>
+                    <td><input id="i_sales" value="2"
+                               onkeyup="value=value.replace(/[^\d]/g,'') "
+                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
+                    </td>
+                </tr>
+
+            </table>
         </div>
 
-        <div id="connect" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">
-            <h2>Connect &amp; Share</h2>
 
-            <p>Real-life sharing is nuanced and rich. Galaxy Nexus makes sharing with mobile devices just as easy at it
-                is in person. </p>
-            <img src="img/nexus_3.jpg" width="558" height="329" alt="Galaxy Nexus"/>
-        </div>
+        <!--<div id="pie" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">-->
+        <!--<h2 style="margin-top: -50px;">Goods Distribution</h2>-->
 
-        <div id="upload" class="step" data-x="-200" data-y="1500" data-rotate="180">
-            <h2>Instant Upload</h2>
+        <!--<div id="chart1" style="width: 600px; height: 400px; background-color: #ffffff"></div>-->
+        <!--</div>-->
 
-            <p>Your photos upload themselves with Instant Upload, which makes it much easier to share them with family
-                and friends.</p>
-            <img src="img/nexus_4.jpg" width="248" height="510" alt="Galaxy Nexus"/>
-        </div>
+        <!--<div id="revenue" class="step" data-x="-1200" data-y="1000" data-scale="0.8" data-rotate="270">-->
+        <!--<h2 style="margin-top: -50px;">Revenue and Cost</h2>-->
 
-        <div id="music" class="step" data-x="-1200" data-y="1000" data-scale="0.8" data-rotate="270">
-            <h2>Jam on with Google Music</h2>
+        <!--<div id="chart" style="width: 600px; height: 400px; background-color: #ffffff">-->
 
-            <p>Google Music makes discovery, purchase, and listening effortless and fun. Store your entire collection
-                for free, and stream your music to your Galaxy Nexus, computer, or other Android devices.</p>
-            <img src="img/nexus_5.jpg" width="570" height="389" alt="Galaxy Nexus"/>
-        </div>
+        <!--</div>-->
+        <!--</div>-->
+
+
         <!-- The Slides Will Go Here -->
     </div>
     <a id="arrowLeft" class="arrow"></a>
@@ -247,10 +344,10 @@
         <div class="inner">
             <h4><a itemprop="name" href="http://etchapps.com">Etch</a></h4>
 
-            <p><i class="icon icon-envelope-alt"></i><a itemprop="email" href="mailto:info@sap.com">info@sap.com</a>
+            <p><i class="icon icon-envelope-alt"></i><a itemprop="email" href="mailto:martin.xu@sap.com">martin.xu@sap.com</a>
             </p>
 
-            <p><i class="icon icon-phone"></i><span itemprop="telephone">+86 61085356</span></p>
+            <p><i class="icon icon-phone"></i><span itemprop="telephone">+86 021 61085356</span></p>
 
             <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <i class="icon icon-map-marker"></i>
@@ -263,6 +360,26 @@
             </p>
         </div>
     </div>
+</div>
+
+
+<!--timeline-->
+
+<div id="timeline">
+    <ul id="dates">
+        <li><a href="#2006">2006</a></li>
+        <li><a href="#2007">2007</a></li>
+        <li><a href="#2008">2008</a></li>
+        <li><a href="#2009">2009</a></li>
+        <li><a href="#2010">2010</a></li>
+        <li><a href="#2011">2011</a></li>
+        <li><a href="#2012">2012</a></li>
+        <li><a href="#2013">2013</a></li>
+        <li><a href="#2014">2014</a></li>
+        <li><a href="#2015">2015</a></li>
+        <li><a href="#2016">2016</a></li>
+        <li><a href="#2017">2017</a></li>
+    </ul>
 </div>
 
 
@@ -288,8 +405,120 @@
 <script src="js/mapsimulate.js"></script>
 <script src="js/magnetic.js"></script>
 <script src="js/Loading.js"></script>
+<script src="js/timeline.js"></script>
 <script src="js/locationPointsDistribution.js"></script>
 <script src="js/script.js"></script>
 <script src="js/forkit.js"></script>
+<script type="text/javascript" src="js/libs/d3.v2.js"></script>
+<script type="text/javascript" src="js/libs/json2.js"></script>
+<script type="text/javascript" src="js/libs/sap.viz.js"></script>
+<script src="js/popout_set.js"></script>
+
+<script type="text/javascript">
+    function submint() {
+        var isCompetitor = document.getElementById("compCheck").value;
+        var isMedicare = document.getElementById("medCheck").value;
+
+        var c_otc = document.getElementById("i_otc").value;
+        var c_rx = document.getElementById("i_rx").value;
+        var c_supplier = document.getElementById("i_supplier").value;
+        var c_cos = document.getElementById("i_cos").value;
+        var c_sale = document.getElementById("i_sales").value;
+        var c_name = document.getElementById("drug_name").value;
+        if (c_otc != "" && c_rx != "" && c_supplier != "" && c_cos != "" && c_sale != "" && c_name != "") {
+            var myJSON = {"storeId":0,
+                "rentId":0,
+                "description":c_name,
+                "timeDepInfoMap":{
+                    "2013":{
+                        "year":2013,
+                        "competitor":isCompetitor,
+                        "revenue":0,
+                        "operationCost":0,
+                        "commodityCost":0,
+                        "onetimeCost":0,
+                        "suppliers":c_supplier,
+                        "cosmeceuticals":c_cos,
+                        "otc":c_otc,
+                        "rx":c_rx,
+                        "medicare":isMedicare,
+                        "numOfSales":c_sale
+                    }
+                }
+
+            };
+            for (var i = 2014; i <= 2017; i++) {
+                myJSON.timeDepInfoMap[i] = myJSON.timeDepInfoMap[2013];
+            }
+            alert("Creat New Store successfully!");
+        }
+        else {
+            alert("Please fill the required value!");
+        }
+        console.log(myJSON);
+    }
+
+    $(function () {
+        var Environment = sap.viz.env;
+        var CrosstableDataset = sap.viz.data.CrosstableDataset;
+        var vizcore = sap.viz.core;
+
+        Environment.initialize({
+            'log':'debug'
+        });
+
+        var chartOption = {
+            title:{
+                visible:true,
+                text:''
+            }
+        };
+
+        var ds = new CrosstableDataset();
+        ds.setData({'analysisAxis':[
+            {
+                'index':1,
+                'data':[
+                    {
+                        'type':'Dimension',
+                        'name':'Goods',
+                        'values':['RX drug', 'OTC', 'Commodity', 'Cosmeceuticals']
+                    }
+
+                ]
+            }
+        ], 'measureValuesGroup':[
+            {
+                'index':1,
+                'data':[
+                    {
+                        'type':'Measure',
+                        'name':'Percentage',
+                        'values':[
+//                                [25, 25, 25, 25 ]
+                            [document.getElementById("i_rx").value,
+                                document.getElementById("i_otc").value,
+                                document.getElementById("i_supplier").value,
+                                document.getElementById("i_cos").value
+                            ]
+
+                        ]
+                    }
+                ]
+            }
+        ]});
+
+        var tagcloud = vizcore.createViz({
+            type:'viz/donut',
+            data:ds,
+            container:$('#chart1'),
+            options:chartOption
+        });
+//
+    });
+
+
+</script>
+
 </body>
 </html>

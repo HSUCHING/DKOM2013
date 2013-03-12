@@ -8,12 +8,12 @@ function loadopenlayers_map(mappoint_array) {
 
     $.each(mappoint_array, function (idx, item) {
         lonlat_v = new OpenLayers.LonLat(item.longitude, item.latitude).transform('EPSG:4326', map.getProjectionObject());
-        if ($.inArray("locationId", Object.keys(item)) > 0) {
-            marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png', "location_" + idx);
-        } else if ($.inArray("storeId", Object.keys(item)) > 0) {
-            marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png', "drugstore_" + idx);
+        if ($.inArray("locationId", Object.keys(item)) >= 0) {
+            marker = GetMark(lonlat_v, 20, 20, 'img/people.png', "location_" + idx);
+        } else if ($.inArray("storeId", Object.keys(item)) >= 0) {
+            marker = GetMark(lonlat_v, 20, 20, 'img/drugstore.png', "drugstore_" + idx);
         } else {
-            marker = GetMark(lonlat_v, 20, 20, 'http://www.k1982.com/png/up/200905/20090513082309637.png', "rent_" + idx);
+            marker = GetMark(lonlat_v, 20, 20, 'img/drugstore.png', "rent_" + idx);
         }
         markers.addMarker(marker);
         mappoint.push(marker);
@@ -21,16 +21,31 @@ function loadopenlayers_map(mappoint_array) {
 
 //    markers.addMarkers(mappoint);
     map.addLayer(markers);
-    $.each(mappoint, function (idx, item) {
-        var mappoint = mappoint_array[idx];
-        var magnetic_obj={};
-        magnetic_obj.id = mappoint.locationId;
-        magnetic_obj.array = [];
-        for (var i = 0; i < mappoint.timeDepInfoMap[Object.keys(mappoint.timeDepInfoMap)[0]].scale; i++) {
-            magnetic_obj.array.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10 + i * 3, y:$("#" + item.icon.id).position().top + 10 + i * 3, name:'location' + mappoint.locationId}));
-        }
-        Magnetic.temppointarray.push(magnetic_obj);
-    });
+    if ($.inArray("locationId", Object.keys(mappoint_array[0])) >= 0) {
+
+        $.each(mappoint, function (idx, item) {
+            var m_point = mappoint_array[idx];
+            var magnetic_obj = {};
+            magnetic_obj.id = m_point.locationId;
+            magnetic_obj.array = [];
+            for (var i = 0; i < m_point.timeDepInfoMap[Object.keys(m_point.timeDepInfoMap)[0]].scale; i++) {
+                magnetic_obj.array.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10 + i * 3, y:$("#" + item.icon.id).position().top + 10 + i * 3, name:'location' + m_point.locationId}));
+            }
+            Magnetic.temppointarray.location.push(magnetic_obj);
+        });
+    }
+
+    if ($.inArray("rentId", Object.keys(mappoint_array[0])) >= 0) {
+        $.each(mappoint, function (idx, item) {
+            var m_point = mappoint_array[idx];
+            var magnetic_obj = {};
+            magnetic_obj.id = m_point.rentId;
+            magnetic_obj.array = [];
+            magnetic_obj.array.push(Magnetic.outZ({x:$("#" + item.icon.id).position().left + 10, y:$("#" + item.icon.id).position().top + 10, name:'rental' + m_point.locationId}));
+            Magnetic.temppointarray.rental.push(magnetic_obj);
+        });
+    }
+
     console.log(Magnetic.temppointarray);
 }
 
@@ -40,7 +55,6 @@ function calculateDistance(originPlace, destPlace) {
     distance_allarray = [];
 //    var temdistance = {};
 //    var route;
-
 
 // DirectionsRequest
     var origins = [];
@@ -146,6 +160,7 @@ $("#buttonContainer").click(function () {
 
                 console.log(locData_array);
                 loadopenlayers_map(locData_array);
+                loadopenlayers_map(rentData_array);
                 jumpsections = {"#photo":$('#photo').offset().top, "#contact":$('#contact').offset().top};
                 $(".loadingcontainer").hide();
             },
@@ -155,7 +170,7 @@ $("#buttonContainer").click(function () {
             },
             beforeSend:function () {
                 $('#world').css({"z-index":2000});
-                $('#world').animate({"opacity":0.5}, 500, 'swing');
+                $('#world').animate({"opacity":1.0}, 500, 'swing');
                 $(".loadingcontainer").show();
             }
         });
@@ -320,7 +335,36 @@ function animatemagnetic() {
                         });
                     }
                     console.log(storeLocationDistances);
-                    generateLocationStoreWeights(storeLocationDistances, storeRevenues);
+                    var analysis_data = generateLocationStoreWeights(storeLocationDistances, storeRevenues);
+                    $.each(Magnetic.temppointarray.location, function (mtlidx, mtlitem) {
+                        $.each(analysis_data, function (adidx, aditem) {
+                            if (mtlitem.id == aditem.locationId) {
+                                $.each(aditem.storeWeights, function (asdidx, asditem) {
+                                    $.each(Magnetic.temppointarray.rental, function (mtridx, mtritem) {
+                                        if (asditem.storeId == mtritem.id) {
+                                            var x_position=mtlitem.array[asdidx].position.x;
+                                            var y_position=mtlitem.array[asdidx].position.y;
+                                            var i=0;
+                                            var time_animate=setInterval(function(){
+                                                mtlitem.array[asdidx].position.x +=(mtritem.array[0].position.x-x_position)/1000;
+                                                mtlitem.array[asdidx].position.y +=(mtritem.array[0].position.y-y_position)/1000;
+                                                i++;
+                                                if(i==1000){
+                                                    clearInterval(time_animate);
+                                                }
+                                            },50);
+
+//                                            mtlitem.array[asdidx].position.x = mtritem.array[0].position.x;
+//                                            mtlitem.array[asdidx].position.y = mtritem.array[0].position.y;
+                                        }
+                                    });
+                                });
+//                                Magnetic.temppointarray.rental
+                            }
+                        });
+                    });
+
+
                 }
             });
 
@@ -329,9 +373,4 @@ function animatemagnetic() {
         }
     });
 }
-
-
-
-
-
 

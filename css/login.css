@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color:;
+    font-family: calibri;
     color: #DDDDDD;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .login, .register {
-    background-color: #000;
+    background-color: transparent;
     position: absolute;
     color: #DDDDDD;
     font-family: 'Helvetica', 'Lucida Grande', 'Arial', sans-serif;
@@ -40,9 +40,9 @@ body {
     width: 360px;
     display: block;
     padding: 10px 12px 12px 10px;
-    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 1) inset, -9px -9px 8px rgba(0, 0, 0, 1) inset;
-    -webkit-box-shadow: 8px 8px 8px rgba(0, 0, 0, 1) inset, -9px -9px 8px rgba(0, 0, 0, 1) inset;
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 1) inset, -9px -9px 8px rgba(0, 0, 0, 1) inset;
+    /*-moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 1) inset, -9px -9px 8px rgba(0, 0, 0, 1) inset;*/
+    /*-webkit-box-shadow: 8px 8px 8px transparent inset, -9px -9px 8px transparent inset;*/
+    /*box-shadow: 8px 8px 8px rgba(0, 0, 0, 1) inset, -9px -9px 8px rgba(0, 0, 0, 1) inset;*/
     /*margin: 100px auto;*/
 }
 
@@ -158,6 +158,10 @@ body {
     font-size: 16px;
 }
 
+.loginborder form ::-webkit-input-placeholder, .registerborder form ::-webkit-input-placeholder {
+    color: #444;
+}
+
 .loginborder form input:focus, .registerborder form input:focus {
     outline: 1px solid #555;
     color: #FFF;
@@ -252,11 +256,12 @@ body {
     width: 100%;
     height: 100%;
     top: -100%;
+    z-index: 9999;
 }
 
 .forkit-curtain {
     /*text-align: center;*/
-    background: rgba(0, 0, 0, 1);
+    background: url("../img/bg-login.png") repeat;
     /*padding-top: 10%;*/
 }
 
@@ -381,8 +386,8 @@ body {
     text-decoration: none;
 }
 
-#menuTop-bar{
-    z-index: 9999 !important;
+#menuTop-bar {
+    z-index: 9000 !important;
 }
 
 #menuTop-bar .active {
@@ -391,7 +396,7 @@ body {
 
 #menuToppanel {
     height: 500px;
-    background: silver;
+    background: url("../img/retina_wood.png") repeat;
     display: none;
     width: 100%;
 }
@@ -446,11 +451,12 @@ body {
     display: none;
 }
 
-.infocardinclass{
+.infocardinclass {
     -webkit-transition: all 1s ease-in-out;
-    -webkit-transform:translateY(5px);
+    -webkit-transform: translateY(5px);
 }
-.infocardoutclass{
+
+.infocardoutclass {
     -webkit-transition: all 1s ease-in-out;
-    -webkit-transform:translateY(-5px);
+    -webkit-transform: translateY(-5px);
 }

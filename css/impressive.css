@@ -4,8 +4,8 @@
 
 
 /**{*/
-	/*margin:0;*/
-	/*padding:0;*/
+/*margin:0;*/
+/*padding:0;*/
 /*}*/
 
 
@@ -15,29 +15,30 @@
 
 
 /*html{*/
-	/*background:url('../img/bg.jpg') #fff;*/
+/*background:url('../img/bg.jpg') #fff;*/
 /*}*/
 
 /*body{*/
-	/*min-height: 600px;*/
-    /*padding: 100px 0 50px;*/
-	/*font:14px/1.3 'Segoe UI',Arial, sans-serif;*/
-	/*box-shadow:0 0 25px rgba(0,0,0,0.3) inset;*/
-	/*height:100%;*/
+/*min-height: 600px;*/
+/*padding: 100px 0 50px;*/
+/*font:14px/1.3 'Segoe UI',Arial, sans-serif;*/
+/*box-shadow:0 0 25px rgba(0,0,0,0.3) inset;*/
+/*height:100%;*/
 /*}*/
 
+
 a, a:visited {
-	text-decoration:none;
-	outline:none;
-	color:#54a6de;
+    text-decoration:none;
+    outline:none;
+    color:#54a6de;
 }
 
 a:hover{
-	text-decoration:underline;
+    text-decoration:underline;
 }
 
 section, footer{
-	display: block;
+    display: block;
 }
 
 
@@ -45,82 +46,92 @@ section, footer{
 	Styling the presentation
 -----------------------------*/
 
+#impress{
+    z-index: 9999;
+}
 
 #impress:not(.impress-not-supported) .step{
-	opacity:0.4;
+    opacity:0.4;
 }
 
 #impress .step{
-	width:700px;
-	height: 600px;
-	position:relative;
-	margin:0 auto;
-	
-	-moz-transition:1s opacity;
-	-webkit-transition:1s opacity;
-	transition:1s opacity;
+    width:600px;
+    height: 600px;
+    position:relative;
+    margin:0 auto;
+
+    align:center
+
+
+    -moz-transition:1s opacity;
+    -webkit-transition:1s opacity;
+    transition:1s opacity;
+
+
 }
 
 #impress .step.active{
-	opacity:1;
+    opacity:1;
 }
 
 #impress h2{
-	font: normal 44px/1.5 'Calibri', sans-serif;
-	color:#444648;
-	position:absolute;
-	z-index:10;
+    font: bold 30px/1.5 'Calibri', sans-serif;
+    color:#444648;
+    /*	position:absolute;*/
+    z-index:10;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
+
 #impress p{
-	font: normal 18px/1.3 'Calibri', sans-serif;
-	color:#27333f;
-	position:absolute;
-	z-index:10;
+    font: bold 18px/1.3 'Calibri', sans-serif;
+    color:#27333f;
+    /*position:absolute;*/
+    z-index:10;
 }
 
 #impress img{
-	position:absolute;
-	z-index:1;
+    /*position:absolute;*/
+    z-index:1;
 }
 
 .arrow{
-	width:32px;
-	height:54px;
-	background:url('../img/arrows.png') no-repeat;
-	position:fixed;
-	top:50%;
-	margin-top:-27px;
-	cursor:pointer;
-	text-indent:-9999px;
-	overflow:hidden;
-	opacity:0.8;
-	border:none !important;
-	text-decoration:none !important;
-	
-	-moz-transition:0.2s opacity;
-	-webkit-transition:0.2s opacity;
-	transition:0.2s opacity;
+    width:32px;
+    height:54px;
+    background:url('../img/arrows.png') no-repeat;
+    position:fixed;
+    top:50%;
+    margin-top:-27px;
+    cursor:pointer;
+    text-indent:-9999px;
+    overflow:hidden;
+    opacity:0.8;
+    border:none !important;
+    text-decoration:none !important;
+
+    -moz-transition:0.2s opacity;
+    -webkit-transition:0.2s opacity;
+    transition:0.2s opacity;
 }
 
 .arrow:hover{
-	opacity:1;
+    opacity:1;
 }
 
 #arrowLeft{
-	left:45px;
+    left:45px;
 }
 
 #arrowRight{
-	right:45px;
-	background-position:top right;
+    right:45px;
+    background-position:top right;
 }
 
 /* Hide the arrows if impress is not supported */
 
 #impress.impress-not-supported + .arrow,
 #impress.impress-not-supported + .arrow + .arrow{
-	display:none;
+    display:none;
 }
 
 
@@ -130,16 +141,17 @@ section, footer{
 
 
 #impress #intro{
-	width: 500px;
+    width: 500px;
 }
 
 #intro h2{
-	text-align: center;
+    text-align: center;
     width: 100%;
+    font-sieze: 28px;
 }
 
 #intro p{
-	font-size: 22px;
+    font-size: 22px;
     left: 290px;
     line-height: 1.6;
     top: 220px;
@@ -147,7 +159,7 @@ section, footer{
 }
 
 #intro img{
-	top: 120px;
+    top: 120px;
 }
 
 
@@ -157,17 +169,17 @@ section, footer{
 
 
 #impress #simplicity{
-	width: 675px;
+    width: 675px;
 }
 
 #simplicity h2{
-	left: 0;
-	top: 135px;
-	width: 400px;
+    left: 0;
+    top: 135px;
+    width: 400px;
 }
 
 #simplicity p{
-	left: 50px;
+    left: 50px;
     text-align: justify;
     text-indent: 16px;
     top: 225px;
@@ -175,7 +187,7 @@ section, footer{
 }
 
 #simplicity img{
-	right: 0;
+    right: 0;
     top: 30px;
 }
 
@@ -186,26 +198,26 @@ section, footer{
 
 
 #impress #connect{
-	width: 560px;
+    width: 560px;
 }
 
 #connect h2{
-	left: 0;
-	top: 370px;
-	width: 100%;
-	text-align:center;
+    left: 0;
+    top: 370px;
+    width: 100%;
+    text-align:center;
 }
 
 #connect p{
-	left:50%;
-	margin-left:-245px;
+    left:50%;
+    margin-left:-245px;
     text-align: left;
     top: 460px;
     width: 490px;
 }
 
 #connect img{
-	right: 0;
+    right: 0;
     top: 50px;
 }
 
@@ -216,23 +228,23 @@ section, footer{
 
 
 #impress #upload{
-	width: 620px;
+    width: 620px;
 }
 
 #upload h2{
-	left: 0;
+    left: 0;
     text-align: left;
     top: 170px;
 }
 
 #upload p{
-	left: 32px;
+    left: 32px;
     top: 255px;
     width: 280px;
 }
 
 #upload img{
-	right: 0;
+    right: 0;
     top: 30px;
 }
 
@@ -243,18 +255,18 @@ section, footer{
 
 
 #impress #music{
-	width: 690px;
+    width: 690px;
 }
 
 #music h2{
-	left: 0;
+    left: 0;
     text-align: center;
     top: 10px;
     width: 100%;
 }
 
 #music p{
-	font-size: 15px;
+    font-size: 15px;
     left: 45px;
     text-indent: 15px;
     top: 119px;
@@ -262,7 +274,7 @@ section, footer{
 }
 
 #music img{
-	right: 0;
+    right: 0;
     top: 200px;
 }
 
@@ -274,48 +286,90 @@ section, footer{
 
 
 footer{
-	background-color: #111111;
-	bottom: 0;
-	box-shadow: 0 -1px 2px #111111;
-	height: 45px;
-	left: 0;
-	position: fixed;
-	width: 100%;
-	z-index: 100000;
+    background-color: #111111;
+    bottom: 0;
+    box-shadow: 0 -1px 2px #111111;
+    height: 45px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
 }
 
 footer h2{
-	color: #EEEEEE;
-	font-size: 14px;
-	font-weight: normal;
-	left: 50%;
-	margin-left: -400px;
-	padding: 13px 0 0;
-	position: absolute;
-	width: 540px;
+    color: #EEEEEE;
+    font-size: 14px;
+    font-weight: normal;
+    left: 50%;
+    margin-left: -400px;
+    padding: 13px 0 0;
+    position: absolute;
+    width: 540px;
 }
 
 footer h2 i{
-	font-style:normal;
-	color:#888;
+    font-style:normal;
+    color:#888;
 }
 
 footer a.tzine,a.tzine:visited{
-	color: #999999;
-	font-size: 12px;
-	left: 50%;
-	margin: 16px 0 0 110px;
-	position: absolute;
-	text-decoration: none;
-	top: 0;
+    color: #999999;
+    font-size: 12px;
+    left: 50%;
+    margin: 16px 0 0 110px;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
 }
 
 footer a i{
-	color:#ccc;
-	font-style: normal;
+    color:#ccc;
+    font-style: normal;
 }
 
 footer a i b{
-	color:#c92020;
-	font-weight: normal;
+    color:#c92020;
+    font-weight: normal;
+}
+/****************************Chart Style*******************************************/
+#chartData {
+    border: 1px solid #333;
+    background: #ebedf2 url("images/gradient.png") repeat-x 0 0;
+}
+
+
+
+#chartData {
+    width: 200px;
+    margin: 0 40px 0 0;
+    float: right;
+    border-collapse: collapse;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    background-position: 0 -100px;
+    font-family: Calibri;
+}
+
+#chartData th, #chartData td {
+    padding: 0.5em;
+    border: 1px dotted #666;
+    text-align: left;
+}
+
+#chartData th {
+    border-bottom: 2px solid #333;
+    text-transform: uppercase;
+}
+
+#chartData td {
+    cursor: pointer;
+}
+
+#chartData td.highlight {
+    background: #e8e8e8;
+}
+
+#chartData tr:hover td {
+    background: #f0f0f0;
 }

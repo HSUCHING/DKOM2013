@@ -21,12 +21,20 @@
     /*margin-top: -50px;*/
     top: 55%;
     text-align: center;
+
+    -webkit-transform: perspective(600px) translateZ(1px) !important;
+    -moz-transform: perspective(600px) translateZ(1px) !important;
+    -ms-transform: perspective(600px) translateZ(1px) !important;
+    -o-transform: perspective(600px) translateZ(1px) !important;
+    transform: perspective(600px) translateZ(1px) !important;
+
+    left: 50%;
 }
 
 .maki a {
 
     display: block;
-    color: #fff;
+    color: #1B2B3F;
     text-decoration: none;
 }
 
@@ -42,7 +50,7 @@
     margin: 0;
     height: 55px;
     width: 230px;
-    color: #fff;
+    color: #1B2B3F;
 }
 
 .maki dt {
@@ -55,26 +63,18 @@
     transform: translateZ(0.3px);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     font-size: 20px;
+    -webkit-box-shadow:2px 2px 5px grey;
 }
 
 .maki dd {
 
-    border-top: 1px dashed rgba(255,255,255,0.3);
+    border-top: 1px dashed #808080;
     line-height: 35px;
     font-size: 15px;
     height: 35px;
     margin: 0;
+    -webkit-box-shadow:2px 2px 5px grey;
 }
 
-.maki dt, .maki dd, .maki a { background: #1B2B3F; }
+.maki dt, .maki dd, .maki a { background: url("../img/subtle_white_feathers.png") repeat; }
 .maki a:hover { background: #899AA8; }
-.maki {
-
-    -webkit-transform: perspective(600px) translateZ(1px) !important;
-    -moz-transform: perspective(600px) translateZ(1px) !important;
-    -ms-transform: perspective(600px) translateZ(1px) !important;
-    -o-transform: perspective(600px) translateZ(1px) !important;
-    transform: perspective(600px) translateZ(1px) !important;
-
-    left: 50%;
-}

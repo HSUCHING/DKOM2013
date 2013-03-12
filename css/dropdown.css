@@ -281,10 +281,12 @@ body {
 .cd-dropdown ul li {
 	position: absolute;
 	width: 100%;
+    -webkit-box-shadow:2px 2px 5px grey;
 }
 
 .cd-active.cd-dropdown > span {
 	color: #4d8c9d;
+    -webkit-box-shadow:2px 2px 5px grey !important;
 }
 
 .cd-active.cd-dropdown > span,

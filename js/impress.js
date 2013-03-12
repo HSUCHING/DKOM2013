@@ -25,7 +25,7 @@
         var style = document.createElement('dummy').style,
             prefixes = 'Webkit Moz O ms Khtml'.split(' '),
             memory = {};
-            
+
         return function ( prop ) {
             if ( typeof memory[ prop ] === "undefined" ) {
 

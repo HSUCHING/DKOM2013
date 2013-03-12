@@ -59,7 +59,22 @@ Magnetic = new(function() {
 
 //                Hsuching
                 console.log(magnet);
-//                openDialog();
+//                $("#infoedit").show();
+//                $("#adivedit").show();
+//                $("#bdivedit").show();
+
+
+                openDialog();
+
+
+
+//                if(magnet.name.indexOf("rental")){
+//                    var rentalId=magnet.name.substring(6,magnet.name.length);
+//                    readJSON(rentalId);
+//                }else if(magnet.name.indexOf("store")){
+//                    var storeId=magnet.name.substring(5,magnet.name.length);
+//                    readJSON(storeId);
+//                }
 //                magnet.position.x +=20;
                 break
             }
@@ -278,7 +293,9 @@ Magnetic = new(function() {
                 useFade: false
             }];
 
-    this.temppointarray=[];
+    this.temppointarray={};
+    this.temppointarray.rental=[];
+    this.temppointarray.location=[];
     this.init = function() {
         e = document.getElementById("world");
         t = document.getElementById("seeMore");
@@ -289,7 +306,7 @@ Magnetic = new(function() {
             e.addEventListener("mousedown", H, false);
             document.addEventListener("mouseup", I, false);
             document.addEventListener("keydown", J, false);
-            window.addEventListener("resize", C, false);
+//            window.addEventListener("resize", C, false);
             e.addEventListener("touchstart", K, false);
             document.addEventListener("touchmove", L, false);
             document.addEventListener("touchend", M, false);
