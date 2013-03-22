@@ -373,3 +373,32 @@ footer a i b{
 #chartData tr:hover td {
     background: #f0f0f0;
 }
+
+
+/*******************button*******************/
+
+#delete {
+    background-image: url('../img/delete.png');
+    width: 50px;
+    height: 55px;
+    position: absolute;
+    margin-left: 200px;
+
+}
+
+#b_submit {
+    width:80px;
+    height:30px;
+    font-size:14px;
+    background:url("../img/bg34.jpg") no-repeat left top;
+    color: #010301;
+    padding-bottom:4px;
+    z-index: 10000;
+    float: right;
+    margin-top: -5%;
+    /*margin-left: 100%;*/
+    margin-right: -150px;
+    vertical-align: middle;
+    line-height: 18px;
+
+}

@@ -521,7 +521,7 @@
         }
     },
     "storeData": {
-        " ": {
+        "101": {
             "storeId": 101,
             "rentId": 101,
             "description": "HengShouTang Drugstore",

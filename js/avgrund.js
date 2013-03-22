@@ -108,5 +108,5 @@ function openDialog() {
 }
 function closeDialog() {
     Avgrund.hide();
-    impressLayer.goback();
+//    impressLayer.goback();
 }

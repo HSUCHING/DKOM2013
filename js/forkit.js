@@ -173,6 +173,7 @@
     function loginsuccess(){
         if($('#lguser').val()=="SAP"&&$('#lgpw').val()=="123456"){
             close();
+            $('.forkit').hide();
             $('.slide').show(1000);
         }else{
             $('#login').addClass('shake');

@@ -32,56 +32,50 @@ var char_data = [];
 //    document.getElementById("column").diplay = "";
 //}
 
-//$(function readJSON(storeId, rentId, toYear)
-var endYear;
-function readJSON(storeId, rentId, toYear)
+$(function readJSON(storeId, rentId, toYear)
 {
 
-    endYear = toYear;
-//    storeId = 101;
-//    rentId = 101;
-//    toYear = 2016;
+
+    storeId = 101;
+    rentId = 101;
+    toYear = 2016;
     var elementPrice = "";
     var elementCompchek = "";
     var elementMedcheck = "";
 
     if (storeId == 0) {
-        //var mydiv = document.getElementById("column");
-        //mydiv.parentNode.removeChild(mydiv);
-        document.getElementById("rent_info").style.display = "inline";
-        document.getElementById("rent_wrapper").style.display = "inline";
+        var mydiv = document.getElementById("column");
+        mydiv.parentNode.removeChild(mydiv);
+        document.getElementById("rent_info").style.display = "block";
+        document.getElementById("rent_wrapper").style.display = "block";
         document.getElementById("store_info").style.display = "none";
         document.getElementById("store_wrapper").style.display = "none";
-        document.getElementById("column").style.display = "none";
-                elementPrice = "rent_price";
+//        document.getElementById("column").style.display = "none";
+        elementPrice = "rent_price";
         elementCompchek = "rent_checkcomp";
         elementMedcheck = "rent_checkmed";
     }
     else {
         document.getElementById("rent_info").style.display = "none";
         document.getElementById("rent_wrapper").style.display = "none";
-        document.getElementById("store_info").style.display = "";
-        document.getElementById("store_wrapper").style.display = "inline";
-        document.getElementById("column").style.display = "inline";
+        document.getElementById("store_info").style.display = "block";
+        document.getElementById("store_wrapper").style.display = "block";
+        document.getElementById("column").style.display = "block";
         elementPrice = "store_price";
         elementCompchek = "store_checkcomp";
         elementMedcheck = "store_checkmed";
     }
 
-//    $.
-// ({
-//        url:'json/demo.json',
-//        type:'post',
-//        dataType:'json',
-//        success:function (jsonobj) {
-            var jsonobj=transferobj.initialobj;
+    $.ajax({
+        url:'json/demo.json',
+        type:'post',
+        dataType:'json',
+        success:function (jsonobj) {
             var jsonobj_keys = Object.keys(jsonobj);
             var locData_array = [];
-
             var jsonobjrentData = jsonobj[jsonobj_keys[2]];
             var jsonobjCharData = jsonobj[jsonobj_keys[5]];
             var jsonobjlocData = jsonobj[jsonobj_keys[3]];
-
             var jsonobjlocData_keys = Object.keys(jsonobjlocData);
             var jsonobjrentData_keys = Object.keys(jsonobjrentData);
             var jsonobjCharData_keys = Object.keys(jsonobjCharData);
@@ -110,22 +104,20 @@ function readJSON(storeId, rentId, toYear)
                 if (store_data.timeDepInfoMap[2013].medicare == true) {
                     document.getElementById(elementMedcheck).src = "img/checked.png"
                 }
+                $.ajax({
+                    url:'json/animate.json',
+                    type:'post',
+                    dataType:'json',
+                    success:function (jsonobj) {
+                        var jsonobj_keys = Object.keys(jsonobj);
 
-//                $.ajax({
-//                    url:'json/animate.json',
-//                    type:'post',
-//                    dataType:'json',
-//                    success:function (jsonobj) {
-                        var jsonobj2=transferobj.animateobj;
-                        var jsonobj_keys2 = Object.keys(jsonobj2);
+                        var locData_array = [];
 
-                        var locData_array2 = [];
+                        for (var i = 0; i < jsonobj_keys.length; i++) {
 
-                        for (var i = 0; i < jsonobj_keys2.length; i++) {
-
-                            var templocData = jsonobj2[jsonobj_keys2[i]];
+                            var templocData = jsonobj[jsonobj_keys[i]];
                             if (templocData.storeId == store_data.storeId) {
-                                locData_array2.push(templocData);
+                                locData_array.push(templocData);
                             }
                         }
 
@@ -142,9 +134,8 @@ function readJSON(storeId, rentId, toYear)
                         for (var i = 0; i <= toYear-2013; i++) {
                             var j = 2013 + i;
                             year[i] =(j).toString();
-                            console.log(year[i]);
-                            myrevenue[i] = locData_array2[0].timeDepInfoMap[j].revenue / 100;
-                            mycost[i] = locData_array2[0].timeDepInfoMap[j].cost / 100;
+                            myrevenue[i] = locData_array[0].timeDepInfoMap[j].revenue / 100;
+                            mycost[i] = locData_array[0].timeDepInfoMap[j].cost / 100;
                             myrevenue[i] = FormatFloat(myrevenue[i], 2);
                             mycost[i] = FormatFloat(mycost[i], 2);
                         }
@@ -211,14 +202,14 @@ function readJSON(storeId, rentId, toYear)
                             options:chartOption
                         });
 
-//                    },
-//                    error:function () {
-//                        alert("error");
-//
-//                    },
-//                    beforeSend:function () {
-//                    }
-//                })
+                    },
+                    error:function () {
+                        alert("error");
+
+                    },
+                    beforeSend:function () {
+                    }
+                })
                 ;
                 var Environment = sap.viz.env;
                 var CrosstableDataset = sap.viz.data.CrosstableDataset;
@@ -351,20 +342,19 @@ function readJSON(storeId, rentId, toYear)
 //                console.log(store_data);
 
 
-//        },
-//        error:function () {
-//            alert("error");
-//
-//        },
-//        beforeSend:function () {
-//        }
-//    })
+        },
+        error:function () {
+            alert("error");
+
+        },
+        beforeSend:function () {
+        }
+    })
+    ;
+
 }
-
-
-//}
-
-
+)
+;
 function submit() {
     var isCompetitor = document.getElementById("rent_compCheck").value;
     var isMedicare = document.getElementById("rent_medCheck").value;
@@ -411,44 +401,11 @@ function submit() {
             }
 
         };
-        for (var i = 2014; i <= endYear; i++) {
+        for (var i = 2014; i <= 2017; i++) {
             myJSON.timeDepInfoMap[i] = jQuery.extend(true, {}, myJSON.timeDepInfoMap[2013]);
             myJSON.timeDepInfoMap[i].year = i;
         }
-
-
-        //alert("Creat New Store successfully!");
-
-        $.ajax({
-
-            url:'rest/gujing/updateStore?fromYear=2013&toYear='+endYear,
-
-            type:'post',
-
-            dataType:'json',
-
-            contentType:'application/json;charset=utf-8',
-
-            data:JSON.stringify(myJSON),
-
-            success:function (jsonobj){
-
-                //update for martin
-                closeDialog();
-
-                freshDataRevenues(1, jsonobj);
-
-            },
-
-            error:function (){
-
-                alert("Error during update distance!");
-
-            }
-
-        });
-
-
+        alert("Creat New Store successfully!");
     }
     else {
         alert("Please fill the required value!");

@@ -32,7 +32,7 @@ jQuery.fn.timelinr = function (options) {
         prevButton:'#prev', // value: any HTML tag or #id, default to #prev
         nextButton:'#next', // value: any HTML tag or #id, default to #next
         arrowKeys:'false', // value: true | false, default to false
-        startAt:3, // value: integer, default to 1 (first)
+        startAt:10, // value: integer, default to 1 (first)
         autoPlay:'false', // value: true | false, default to false
         autoPlayDirection:'forward', // value: forward | backward, default to forward
         autoPlayPause:2000               // value: integer (1000 = 1 seg), default to 2000 (2segs)
@@ -65,15 +65,22 @@ jQuery.fn.timelinr = function (options) {
             var defaultPositionDates = parseInt($(settings.datesDiv).css('marginTop').substring(0, $(settings.datesDiv).css('marginTop').indexOf('px')));
         }
 
-        var initialtime=0;
+//        var initialtime=0;
 
+        year=2013;
         $(settings.datesDiv + ' a').click(function (event) {
-            if(initialtime==0){
-                initialtime=1;
-            }else{
-                map.clearMarkers();
-                initialData(initialtime);
-            }
+
+            year=$(this).text(),areaId;
+            initialData($(this).text(),areaId);
+
+//            console.log($(this).text());
+//            initialData(initialtime);
+//            if(initialtime==0){
+//                initialtime=1;
+//            }else{
+//                map.clearMarkers();
+//
+//            }
 
 
 

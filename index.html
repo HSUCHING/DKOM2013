@@ -5,6 +5,12 @@
     <title>DKOM2013</title>
 
     <!--Import all the css-->
+    <script src="js/popout.js"></script>
+    <script type="text/javascript" src="js/libs/d3.v2.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/libs/json2.js"></script>
+    <script type="text/javascript" src="js/libs/sap.viz.js"></script>
+
     <link rel="stylesheet" href="css/all.css">
 </head>
 
@@ -35,37 +41,60 @@
 
 <aside id="default-popup" class="avgrund-popup">
     <div id="impress" class="impress-not-supported">
+
         <div id="comparison" class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="190">
 
-            <div id="info" style="clear:both; height: 150px; ">
+            <!--<div id="info" style="clear:both; height: 150px; ">-->
+                <!--<h2>Drug Store information:</h2>-->
+
+                <!--<p>Name: <input id="drug_name"/><span id="j_drugname"></span>-->
+                    <!--<br/>Rental Price:<span id="j_price"></span> 0,000 RMB/year-->
+                    <!--<br/>-->
+                    <!--<img id="compCheck" src="img/unchecked.png" style="visibility: hidden">-->
+                    <!--<input type="checkbox" value="true"/> Competitor</img>-->
+                    <!--<img id="check_med" src="img/unchecked.png" style="visibility: hidden">-->
+                    <!--<input id="medCheck" type="checkbox" value="true"/>Medicare</img> </p>-->
+
+            <!--</div>-->
+
+            <div id="rent_info" style="clear:both; height: 150px ;margin-left: -200px; ">
                 <h2>Drug Store information:</h2>
 
-                <p>Name: <input id="drug_name"/><span id="j_drugname"></span>
-                    <br/>Rental Price:<span id="j_price"></span> 0,000 RMB/year
+                <p>Name: <input id="rent_drugname"/>
+                    <br/>Rental Price:<span id="rent_price"></span>  RMB/year
                     <br/>
-                    <img id="compCheck" src="img/unchecked.png" style="visibility: hidden">
-                    <input type="checkbox" value="true"/> Competitor</img>
-                    <img id="check_med" src="img/unchecked.png" style="visibility: hidden">
-                    <input id="medCheck" type="checkbox" value="true"/>Medicare</img> </p>
+                    <input id="rent_compCheck" type="checkbox" value="true"/> Competitor</img>
+                    <input id="rent_medCheck" type="checkbox" value="true"/>Medicare</img> </p>
+            </div>
+
+            <div id="store_info" style="clear:both; height: 150px; display:none ;margin-left: -200px;">
+                <h2>Drug Store information:</h2>
+
+                <p>Name: <span id="store_drugname"></span><input type="button" id="delete" onclick="deleteStore()" title="delete"></button>
+                    <br/>Rental Price:<span id="store_price"></span> RMB/year
+                    <br/>
+                    <img id="store_checkcomp" src="img/unchecked.png">Competitor</img>
+                    <img id="store_checkmed" src="img/unchecked.png">Medicare</img> </p>
 
             </div>
 
-            <div id="adiv" style="clear:both; height: 100px; width: auto; "><p>Advantage:<br/><br/>
-                <img id="a_1" title="Big rental area" style="visibility:hidden" src="img/icons/1_area.png"/>
-                <img id="a_3" title="Near hospital" style="visibility:hidden" src="img/icons/1_hospital.png"/>
-                <img id="a_4" title="Near shopping mall" style="visibility:hidden" src="img/icons/1_malls.png"/>
-                <img id="a_5" title="Near metro" style="visibility:hidden" src="img/icons/1_metro.png"/>
-                <img id="a_6" title="Low rental price" style="visibility:hidden" src="img/icons/0_price.png"/>
-                <img id="a_7" title="Near residental sites" style="visibility:hidden" src="img/icons/1_residents.png"/>
-            </p>
+            <div id="adiv" style="clear:both; height: 80px; width: auto; "><p>Advantage:<br/>
+                <img id="Astore_1" title="Big rental area" style="display:none" src="img/icons/1_area.png"/>
+                <img id="Astore_3" title="Near hospital" style="display:none" src="img/icons/1_hospital.png"/>
+                <img id="Astore_4" title="Near shopping mall" style="display:none" src="img/icons/1_malls.png"/>
+                <img id="Astore_5" title="Near metro" style="display:none" src="img/icons/1_metro.png"/>
+                <img id="Astore_6" title="Low rental price" style="display:none" src="img/icons/0_price.png"/>
+                <img id="Astore_7" title="Near residental sites" style="display:none" src="img/icons/1_residents.png"/>
             </div>
-            <div id="bdiv" style="clear: both; hegith: 100px; width: auto; "><p>Disadvantage:
-                <br/><br/>
-                <img id="b_1" title="Small rental area" style="visibility:hidden" src="img/icons/0_area.png"/>
-                <img id="b_4" title="Far from shopping mall" style="visibility:hidden" src="img/icons/0_mall.png"/>
-                <img id="b_5" title="Far from metro" style="visibility:hidden" src="img/icons/0_metro.png"/>
-                <img id="b_7" title="Far from residental sites" style="visibility:hidden"
-                     src="img/icons/0_residents.png"/>
+            <div id="bdiv" style="clear: both; hegith: 80px; width: auto; "><p>Disadvantage: <br/>
+                <img id="Bstore_1" title="Small rental area" style="display:none" src="img/icons/0_area.png"/>
+                <img id="Bstore_4" title="Far from shopping mall" style="display:none" src="img/icons/0_mall.png"/>
+                <img id="Bstore_5" title="Far from metro" style="display:none" src="img/icons/0_metro.png"/>
+                <img id="Bstore_7" title="Far from residental sites" style="display:none" src="img/icons/0_residents.png"/>
+                <!--<img id="Brent_1" title="Small rental area" style="display:none" src="img/icons/0_area.png"/>-->
+                <!--<img id="Brent_4" title="Far from shopping mall" style="display:none" src="img/icons/0_mall.png"/>-->
+                <!--<img id="Brent_5" title="Far from metro" style="display:none" src="img/icons/0_metro.png"/>-->
+                <!--<img id="Brent_7" title="Far from residental sites" style="display:none" src="img/icons/0_residents.png"/>-->
             </p>
             </div>
 
@@ -102,81 +131,128 @@
         </div>
 
 
+        <!--<div id="pie" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">-->
+            <!--<h2>Goods Distribution</h2>-->
+
+            <!--<div id="chart1" style="width: 600px; height: 400px; background-color: #ffffff"></div>-->
+            <!--<button id="b_submit" onclick="submint()">Submit</button>-->
+            <!--<table id="chartData">-->
+
+                <!--<tr>-->
+                    <!--<th>Goods</th>-->
+                    <!--<th>Percentage (%)</th>-->
+                <!--</tr>-->
+
+                <!--<tr style="color: #0DA068">-->
+                    <!--<td>OTC</td>-->
+                    <!--<td><input id="i_otc" value="25"-->
+                               <!--onkeyup="value=value.replace(/[^\d]/g,'')"-->
+                               <!--onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+                <!--<tr style="color: #194E9C">-->
+                    <!--<td>RX Drug</td>-->
+                    <!--<td><input id="i_rx" value="25"-->
+                               <!--onkeyup="value=value.replace(/[^\d]/g,'') "-->
+                               <!--onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+                <!--<tr style="color: #F88E5D">-->
+                    <!--<td>Commodity</td>-->
+                    <!--<td><input id="i_supplier" value="25"-->
+                               <!--onkeyup="value=value.replace(/[^\d]/g,'') "-->
+                               <!--onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+                <!--<tr style="color: #ED5713">-->
+                    <!--<td>Cosmeceuticals</td>-->
+                    <!--<td><input id="i_cos" value="25"-->
+                               <!--onkeyup="value=value.replace(/[^\d]/g,'') "-->
+                               <!--onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr style="color: #5F91DC">-->
+                    <!--<td>Sales</td>-->
+                    <!--<td><input id="i_sales" value="2"-->
+                               <!--onkeyup="value=value.replace(/[^\d]/g,'') "-->
+                               <!--onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+            <!--</table>-->
+        <!--</div>-->
+
         <div id="pie" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">
-            <h2>Goods Distribution</h2>
+            <h2 style="margin-top: -20px; ">Goods Distribution</h2>
 
-            <div id="chart1" style="width: 600px; height: 400px; background-color: #ffffff"></div>
-            <button id="b_submit" onclick="submint()">Submit</button>
-            <table id="chartData">
+            <div id="store_wrapper" style="display: none">
+                <div id="store_chart1" style="width: 600px; height: 400px; background-color: #ffffff "></div>
+            </div>
+            <div id="rent_wrapper" style="display: block" >
+                <div id="rent_chart1" style=" width: 600px; height: 400px; background-color: #ffffff"></div>
+                <button id="b_submit" onclick="submit()" >Submit</button>
+                <table id="chartData" style="position: absolute " onload="createChart()">
 
-                <tr>
-                    <th>Goods</th>
-                    <th>Percentage (%)</th>
-                </tr>
+                    <tr>
+                        <th>Goods</th>
+                        <th>Quantity</th>
+                    </tr>
 
-                <tr style="color: #0DA068">
-                    <td>OTC</td>
-                    <td><input id="i_otc" value="25"
-                               onkeyup="value=value.replace(/[^\d]/g,'')"
-                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
-                    </td>
-                </tr>
+                    <tr style="color: #0DA068">
+                        <td>OTC</td>
+                        <td><input id="i_otc" value="25" onfocus="createChart()" style="width: 50px"
+                                   onkeyup="value=value.replace(/[^\d]/g,'')"
+                                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>%
+                        </td>
+                    </tr>
 
-                <tr style="color: #194E9C">
-                    <td>RX Drug</td>
-                    <td><input id="i_rx" value="25"
-                               onkeyup="value=value.replace(/[^\d]/g,'') "
-                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
-                    </td>
-                </tr>
+                    <tr style="color: #194E9C">
+                        <td>RX Drug</td>
+                        <td><input id="i_rx" value="25" onfocus="createChart()" style="width: 50px"
+                                   onkeyup="value=value.replace(/[^\d]/g,'') "
+                                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>%
+                        </td>
+                    </tr>
 
-                <tr style="color: #F88E5D">
-                    <td>Commodity</td>
-                    <td><input id="i_supplier" value="25"
-                               onkeyup="value=value.replace(/[^\d]/g,'') "
-                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
-                    </td>
-                </tr>
+                    <tr style="color: #F88E5D">
+                        <td>Commodity</td>
+                        <td><input id="i_supplier" value="25" onfocus="createChart()" style="width: 50px"
+                                   onkeyup="value=value.replace(/[^\d]/g,'') "
+                                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>%
+                        </td>
+                    </tr>
 
-                <tr style="color: #ED5713">
-                    <td>Cosmeceuticals</td>
-                    <td><input id="i_cos" value="25"
-                               onkeyup="value=value.replace(/[^\d]/g,'') "
-                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
-                    </td>
-                </tr>
-                <tr style="color: #5F91DC">
-                    <td>Sales</td>
-                    <td><input id="i_sales" value="2"
-                               onkeyup="value=value.replace(/[^\d]/g,'') "
-                               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
-                    </td>
-                </tr>
+                    <tr style="color: #ED5713">
+                        <td>Cosmeceuticals</td>
+                        <td><input id="i_cos" value="25" onfocus="createChart()" style="width: 50px"
+                                   onkeyup="value=value.replace(/[^\d]/g,'') "
+                                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>%
+                        </td>
+                    </tr>
+                    <tr style="color: #5F91DC">
+                        <td>Sales</td>
+                        <td><input id="i_sales" value="2" style="width: 50px"
+                                   onkeyup="value=value.replace(/[^\d]/g,'') "
+                                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/>
+                        </td>
+                    </tr>
 
-            </table>
+                </table>
+            </div>
+        </div>
+        <div id="column" class="step" data-x="-1200" data-y="1000" data-scale="0.8" data-rotate="270" style="display: none">
+            <h2 style="margin-top:-20px">Revenue and Cost</h2>
+            <div id="store_chart" style="width: 600px; height: 400px; background-color: #ffffff">
+            </div>
         </div>
 
-
-        <!--<div id="pie" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">-->
-        <!--<h2 style="margin-top: -50px;">Goods Distribution</h2>-->
-
-        <!--<div id="chart1" style="width: 600px; height: 400px; background-color: #ffffff"></div>-->
-        <!--</div>-->
-
-        <!--<div id="revenue" class="step" data-x="-1200" data-y="1000" data-scale="0.8" data-rotate="270">-->
-        <!--<h2 style="margin-top: -50px;">Revenue and Cost</h2>-->
-
-        <!--<div id="chart" style="width: 600px; height: 400px; background-color: #ffffff">-->
-
-        <!--</div>-->
-        <!--</div>-->
-
-
-        <!-- The Slides Will Go Here -->
     </div>
     <a id="arrowLeft" class="arrow"></a>
     <a id="arrowRight" class="arrow"></a>
-    <button onclick="javascript:closeDialog();">Close</button>
+    <input type="button" onclick="javascript:closeDialog();" style=" width: 67px; height: 22px;background-image: url('img/closelabel.gif');"/>
 </aside>
 
 
@@ -320,7 +396,7 @@
             <dl class="maki">
                 <dt>热门商区</dt>
                 <dd><a value="lujiazui" href="#">陆家嘴</a></dd>
-                <dd><a value="babaiban" href="#">八佰伴</a></dd>
+                <dd><a value="YiHan" href="#">八佰伴</a></dd>
                 <dd><a value="centerpark" href="#">世纪公园</a></dd>
                 <dd><a value="jinbridge" href="#">金桥</a></dd>
                 <dd><a value="yuanshenggymcenter" href="#">源深体育中心</a></dd>
@@ -383,6 +459,13 @@
 </div>
 
 
+<button id="rent_100"></button>
+<button id="rent_101"></button>
+<button id="rent_102"></button>
+<button id="rent_103"></button>
+<button id="rent_104"></button>
+
+
 <!-- The ribbon -->
 <a class="forkit" data-text="Login in/Register" data-text-detached="Drag down >"
    href="#"><img style="position: absolute; top: 0; right: 0; border: 0;"
@@ -409,56 +492,26 @@
 <script src="js/locationPointsDistribution.js"></script>
 <script src="js/script.js"></script>
 <script src="js/forkit.js"></script>
-<script type="text/javascript" src="js/libs/d3.v2.js"></script>
-<script type="text/javascript" src="js/libs/json2.js"></script>
-<script type="text/javascript" src="js/libs/sap.viz.js"></script>
-<script src="js/popout_set.js"></script>
 
 <script type="text/javascript">
-    function submint() {
-        var isCompetitor = document.getElementById("compCheck").value;
-        var isMedicare = document.getElementById("medCheck").value;
-
-        var c_otc = document.getElementById("i_otc").value;
-        var c_rx = document.getElementById("i_rx").value;
-        var c_supplier = document.getElementById("i_supplier").value;
-        var c_cos = document.getElementById("i_cos").value;
-        var c_sale = document.getElementById("i_sales").value;
-        var c_name = document.getElementById("drug_name").value;
-        if (c_otc != "" && c_rx != "" && c_supplier != "" && c_cos != "" && c_sale != "" && c_name != "") {
-            var myJSON = {"storeId":0,
-                "rentId":0,
-                "description":c_name,
-                "timeDepInfoMap":{
-                    "2013":{
-                        "year":2013,
-                        "competitor":isCompetitor,
-                        "revenue":0,
-                        "operationCost":0,
-                        "commodityCost":0,
-                        "onetimeCost":0,
-                        "suppliers":c_supplier,
-                        "cosmeceuticals":c_cos,
-                        "otc":c_otc,
-                        "rx":c_rx,
-                        "medicare":isMedicare,
-                        "numOfSales":c_sale
-                    }
-                }
-
-            };
-            for (var i = 2014; i <= 2017; i++) {
-                myJSON.timeDepInfoMap[i] = myJSON.timeDepInfoMap[2013];
-            }
-            alert("Creat New Store successfully!");
-        }
-        else {
-            alert("Please fill the required value!");
-        }
-        console.log(myJSON);
-    }
-
     $(function () {
+        var imp = impress();
+
+        $('#arrowLeft').click(function (e) {
+            imp.prev();
+            e.preventDefault();
+        });
+
+        $('#arrowRight').click(function (e) {
+            imp.next();
+            e.preventDefault();
+        });
+
+    });
+
+</script>
+<script type="text/javascript">
+    function createChart() {
         var Environment = sap.viz.env;
         var CrosstableDataset = sap.viz.data.CrosstableDataset;
         var vizcore = sap.viz.core;
@@ -511,11 +564,11 @@
         var tagcloud = vizcore.createViz({
             type:'viz/donut',
             data:ds,
-            container:$('#chart1'),
+            container:$('#rent_chart1'),
             options:chartOption
         });
 //
-    });
+    }
 
 
 </script>
